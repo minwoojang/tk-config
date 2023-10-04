@@ -1,3 +1,11 @@
+#shotgun toolkit
+
+core/install_location.yml
+core/pipeline_configuration.yml
+
+*/install_location.yml
+*/pipeline_configuration.yml
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
