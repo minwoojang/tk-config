@@ -13,11 +13,13 @@
 
 includes:
 - ../app_locations.yml
+- ../cv_app_locations.yml
 - ../engine_locations.yml
 - ./tk-multi-launchapp.yml
 - ./tk-multi-publish2.yml
 - ./tk-multi-screeningroom.yml
 - ./tk-multi-demo.yml
+- ./tk-multi-version.yml
 
 ################################################################################
 
@@ -41,6 +43,7 @@ settings.tk-desktop.project:
     tk-multi-publish2: "@settings.tk-multi-publish2.standalone"
     tk-multi-screeningroom: "@settings.tk-multi-screeningroom.rv"
     tk-multi-demo: "@settings.tk-multi-demo.standalone"
+    tk-multi-version: "@settings.tk-multi-version.standalone"
   groups:
   - matches:
     - "*Fla*"
