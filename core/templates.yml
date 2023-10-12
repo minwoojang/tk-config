@@ -258,7 +258,7 @@ paths:
     photoshop_shot_png_publish:
         definition: '@shot_root/pub/photoshop/{Shot}_{Step}_v{version}[_{name}].png'
     photoshop_shot_jpg_publish:
-        definition: '@shot_root/pub/photoshop/{Shot}_{Step}_v{version}[_{name}].psd'
+        definition: '@shot_root/pub/photoshop/{Shot}_{Step}_v{version}[_{name}].jpg'
 
     #
     # After Effects
