@@ -17,7 +17,15 @@
 
 # ---- Multi apps
 
+# version tool
 apps.tk-multi-version.location:
   name: tk-multi-version
   type: dev
   path: O:/inhouse/shotgun/application/tk-multi-version
+
+# register asset list tool
+
+apps.tk-multi-asset_register.location:
+  name: tk-multi-asset_register
+  type: dev
+  path: O:/inhouse/shotgun/application/tk-multi-asset_register
