@@ -51,7 +51,8 @@ class AppLaunch(tank.Hook):
             import rez as _
         except ImportError:
             rez_path = self.get_rez_module_root()
-            rez_path = rez_path.decode('utf-8')
+            if sys.getdefaultencoding() != 'utf-8':
+                rez_path = rez_path.decode('utf-8')
             sys.path.append(rez_path)
         
         from rez import resolved_context
@@ -69,8 +70,8 @@ class AppLaunch(tank.Hook):
                 stdin = False,
                 block = False
             )
-            with open("D:\\command2.txt","w") as file:
-                file.write(str(proc))
+            # with open("D:\\command2.txt","w") as file:
+            #     file.write(str(proc))
             return_code = 0
             return {'command': command,'return_code': return_code,}
 
