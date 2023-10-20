@@ -266,17 +266,17 @@ paths:
 
     # The location of WIP files
     aftereffects_shot_work:
-        definition: '@shot_root/env/afx/{name}.v{version}.aep'
+        definition: '@shot_root/dev/env/afx/{Shot}_{Step}_v{version}[_{name}].aep'
     shot_work_area_aftereffects:
-        definition: '@shot_root/env/afx'
+        definition: '@shot_root/dev/env/afx'
     # The location of backups of WIP files
     aftereffects_shot_snapshot:
-        definition: '@shot_root/env/afx/snapshots/{name}.v{version}.{timestamp}.aep'
+        definition: '@shot_root/dev/env/afx/snapshots/{Shot}_{Step}_v{version}[_{name}].{timestamp}.aep'
     # The location of published files
     shot_publish_area_aftereffects:
         definition: '@shot_root/pub/afx'
     aftereffects_shot_publish:
-        definition: '@shot_root/pub/afx/{name}.v{version}.aep'
+        definition: '@shot_root/pub/afx/{Shot}_{Step}_v{version}[_{name}].aep'
     aftereffects_shot_render_pub_mono:
         definition: '@shot_root/pub/elements/{name}/v{version}/{width}x{height}/{Shot}_{name}_{afx.comp}_v{version}.{SEQ}.tif'
     # The following template uses {afx.mov.ext} this is a special key, that will be only there
@@ -471,17 +471,17 @@ paths:
 
     # The location of WIP files
     aftereffects_asset_work:
-        definition: '@asset_root/dev/afx/{name}.v{version}.aep'
+        definition: '@asset_root/dev/afx/{Shot}_{Step}_v{version}[_{name}].aep'
     asset_work_area_aftereffects:
         definition: '@asset_root/dev/afx'
     # The location of backups of WIP files
     aftereffects_asset_snapshot:
-        definition: '@asset_root/dev/afx/snapshots/{name}.v{version}.{timestamp}.aep'
+        definition: '@asset_root/dev/afx/snapshots/{Shot}_{Step}_v{version}[_{name}].{timestamp}.aep'
     # The location of published files
     asset_publish_area_aftereffects:
         definition: '@asset_root/pub/afx'
     aftereffects_asset_publish:
-        definition: '@asset_root/pub/afx/{name}.v{version}.aep'
+        definition: '@asset_root/pub/afx/{Shot}_{Step}_v{version}[_{name}].aep'
     aftereffects_asset_render_pub_mono:
         definition: '@asset_root/pub/elements/{name}/v{version}/{width}x{height}/{Asset}_{name}_{afx.comp}_v{version}.{SEQ}.tif'
     # The following template uses {afx.mov.ext} this is a special key, that will be only there
