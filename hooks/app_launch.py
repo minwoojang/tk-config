@@ -51,11 +51,13 @@ class AppLaunch(tank.Hook):
             import rez as _
         except ImportError:
             rez_path = self.get_rez_module_root()
-            if sys.getdefaultencoding() != 'utf-8':
+            if isinstance(rez_path, bytes):
                 rez_path = rez_path.decode('utf-8')
+            elif isinstance(rez_path, str):
+                pass
             sys.path.append(rez_path)
         
-        from rez import resolved_context
+        from rez import resolved_context 
         
         command = 'start "App" "{path}" {args}'.format(path=app_path, args=app_args)
         
