@@ -50,11 +50,9 @@ class AppLaunch(tank.Hook):
         try:
             import rez as _
         except ImportError:
-            rez_path = self.get_rez_module_root()
-            if isinstance(rez_path, bytes):
-                rez_path = rez_path.decode('utf-8')
-            elif isinstance(rez_path, str):
-                pass
+            rez_path = 'O:\\inhouse\\rez-packages\\rez\\2.113.0\\platform-windows\\arch-AMD64'
+            # rez_path = self.get_rez_module_root()
+            # rez_path = rez_path.decode('utf-8')
             sys.path.append(rez_path)
         
         from rez import resolved_context 
