@@ -27,6 +27,10 @@
 # {Shot}. The section below tells Sgtk which data types and formats to expect for each key.
 #
 keys:
+    Project:
+        type: str
+        shotgun_entity_type: Project
+        shotgun_field_name: name
     Sequence:
         type: str
     Shot:
@@ -399,27 +403,27 @@ paths:
         definition: '@shot_root/pub/nuke'
     # The location of WIP script files
     nuke_shot_work:
-        definition: '@shot_root/dev/nuke/{Shot}_{task_name}_[_{name}]_v{version}.nk'
+        definition: '@shot_root/dev/nuke/{Project}_{Shot}_{task_name}_[{name}]_v{version}.nk'
     # The location of backups of WIP files
     nuke_shot_snapshot:
-        definition: '@shot_root/dev/nuke/snapshots/{Shot}_{Step}_v{version}[_{name}].{timestamp}.nk'
+        definition: '@shot_root/dev/nuke/snapshots/{Project}_{Shot}_{Step}_[{name}]_v{version}.{timestamp}.nk'
     # The location of published nuke script files
     nuke_shot_publish:
-        definition: '@shot_root/pub/nuke/{Shot}_{Step}_v{version}[_{name}].nk'
+        definition: '@shot_root/pub/nuke/{Project}_{Shot}_{Step}_[{name}]_v{version}.nk'
     # write node outputs
     nuke_shot_render_mono_dpx:
-        definition: '@shot_root/dev/images/v{version}/{Shot}_{nuke.output}_v{version}.{SEQ}.dpx'
+        definition: '@shot_root/dev/images/v{version}/{Project}_{Shot}_{nuke.output}_v{version}.{SEQ}.dpx'
     nuke_shot_render_pub_mono_dpx:
-        definition: '@shot_root/pub/images/v{version}/{Shot}_{nuke.output}_v{version}.{SEQ}.dpx'
+        definition: '@shot_root/pub/images/v{version}/{Project}_{Shot}_{nuke.output}_v{version}.{SEQ}.dpx'
     nuke_shot_render_stereo:
-        definition: '@shot_root/dev/images/{name}/v{version}/{width}x{height}/{Shot}_{name}_{nuke.output}_{eye}_v{version}.{SEQ}.exr'
+        definition: '@shot_root/dev/images/{name}/v{version}/{width}x{height}/{Project}_{Shot}_{name}_{nuke.output}_{eye}_v{version}.{SEQ}.exr'
     nuke_shot_render_pub_stereo:
-        definition: '@shot_root/pub/elements/{name}/v{version}/{width}x{height}/{Shot}_{name}_{nuke.output}_{eye}_v{version}.{SEQ}.exr'
+        definition: '@shot_root/pub/elements/{name}/v{version}/{width}x{height}/{Project}_{Shot}_{name}_{nuke.output}_{eye}_v{version}.{SEQ}.exr'
     # review output
     shot_quicktime_quick:
-        definition: '@shot_root/review/quickdaily/{Shot}_{name}_{iteration}.mov'
+        definition: '@shot_root/review/quickdaily/{Project}_{Shot}_{name}_{iteration}.mov'
     nuke_shot_render_movie:
-        definition: '@shot_root/review/{Shot}_{nuke.output}_v{version}.mov'
+        definition: '@shot_root/review/{Project}_{Shot}_{nuke.output}_v{version}.mov'
 
     #
     # Hiero
