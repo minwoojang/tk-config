@@ -403,13 +403,13 @@ paths:
         definition: '@shot_root/pub/nuke'
     # The location of WIP script files
     nuke_shot_work:
-        definition: '@shot_root/dev/nuke/{Project}_{Shot}_{task_name}[_{name}_]v{version}.nk'
+        definition: '@shot_root/dev/nuke/{Project}_{Shot}_{task_name}_[{name}_]v{version}.nk'
     # The location of backups of WIP files
     nuke_shot_snapshot:
-        definition: '@shot_root/dev/nuke/snapshots/{Project}_{Shot}_{Step}[_{name}_]v{version}.{timestamp}.nk'
+        definition: '@shot_root/dev/nuke/snapshots/{Project}_{Shot}_{Step}_[{name}_]v{version}.{timestamp}.nk'
     # The location of published nuke script files
     nuke_shot_publish:
-        definition: '@shot_root/pub/nuke/{Project}_{Shot}_{Step}[_{name}_]v{version}.nk'
+        definition: '@shot_root/pub/nuke/{Project}_{Shot}_{Step}_[{name}_]v{version}.nk'
     # write node outputs
     nuke_shot_render_mono_dpx:
         definition: '@shot_root/dev/images/v{version}/{Project}_{Shot}_{nuke.output}_v{version}.{SEQ}.dpx'
