@@ -50,15 +50,14 @@ class AppLaunch(tank.Hook):
         try:
             import rez as _
         except ImportError:
-            rez_path = 'O:\\inhouse\\rez-packages\\rez\\2.113.0\\platform-windows\\arch-AMD64'
-            # rez_path = self.get_rez_module_root()
-            # rez_path = rez_path.decode('utf-8')
+            rez_path = self.get_rez_module_root()
+            if not isinstance(rez_path, str):
+                rez_path = rez_path.decode('utf-8')
             sys.path.append(rez_path)
         
         from rez import resolved_context 
         
         command = 'start "App" "{path}" {args}'.format(path=app_path, args=app_args)
-        
         if not packages:
             self.logger.debug('No rez packages were found. The default boot, instead.')
             return_code = os.system(command)
@@ -70,18 +69,14 @@ class AppLaunch(tank.Hook):
                 stdin = False,
                 block = False
             )
-            # with open("D:\\command2.txt","w") as file:
-            #     file.write(str(proc))
             return_code = 0
             return {'command': command,'return_code': return_code,}
 
     def get_rez_packages(self,app_name,version,project):
-        
-        filter_dict = [['code','is',app_name.title()]
-                        #['projects','in',project]
+        filter_dict = [['code','is',app_name.title()+" "+version],
+                        ['projects','in',project]
                         ]
         packages = self.sg.find("Software",filter_dict,['sg_rez'])
-
         if packages: 
             packages =  packages[0]['sg_rez']
 
