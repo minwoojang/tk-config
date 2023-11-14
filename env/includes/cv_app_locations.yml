@@ -24,9 +24,13 @@ apps.tk-multi-version.location:
   path: O:/inhouse/shotgun/application/tk-multi-version
 
 # register asset list tool
-
 apps.tk-multi-asset_register.location:
   name: tk-multi-asset_register
   type: dev
   path: O:/inhouse/shotgun/application/tk-multi-asset_register
   
+# io manager test
+apps.tk-iomanager.location:
+  name: tk-iomanager
+  type: dev
+  path: O:/inhouse/shotgun/application/tk-iomanager

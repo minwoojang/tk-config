@@ -84,7 +84,7 @@ class AppLaunch(tank.Hook):
             packages = [ x for x in packages.split(",")] 
         else:
             packages = None
-        
+
         return packages
         
     def get_rez_module_root(self):
