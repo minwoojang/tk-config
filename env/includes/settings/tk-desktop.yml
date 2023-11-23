@@ -20,8 +20,6 @@ includes:
 - ./tk-multi-screeningroom.yml
 - ./tk-multi-demo.yml
 - ./tk-multi-version.yml
-# - ./tk-multi-asset_register.yml
-- ./tk-iomanager.yml
 
 ################################################################################
 
@@ -46,8 +44,6 @@ settings.tk-desktop.project:
     tk-multi-screeningroom: "@settings.tk-multi-screeningroom.rv"
     tk-multi-demo: "@settings.tk-multi-demo.standalone"
     tk-multi-version: "@settings.tk-multi-version.standalone"
-  #  tk-multi-asset_register: "@settings.tk-multi-asset_register.standalone"
-    tk-iomanager: "@settings.tk-iomanager.standalone"
   groups:
   - matches:
     - "*Fla*"
