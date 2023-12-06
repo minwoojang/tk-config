@@ -247,22 +247,22 @@ paths:
 
     # The location of WIP files
     photoshop_shot_work:
-        definition: '@shot_root/dev/photoshop/{Shot}_{Step}_v{version}[_{name}].psd'
+        definition: '@shot_root/dev/photoshop/{Shot}[_{name}]_{Step}_v{version}.psd'
     shot_work_area_photoshop:
         definition: '@shot_root/dev/photoshop'
     # The location of backups of WIP files
     photoshop_shot_snapshot:
-        definition: '@shot_root/dev/photoshop/snapshots/{Shot}_{Step}_v{version}[_{name}].{timestamp}.psd'
+        definition: '@shot_root/dev/photoshop/snapshots/{Shot}[_{name}]_{Step}_v{version}.{timestamp}.psd'
     # The location of published files
     shot_publish_area_photoshop:
         definition: '@shot_root/pub/photoshop'
     photoshop_shot_publish:
-        definition: '@shot_root/pub/photoshop/{Shot}_{Step}_v{version}[_{name}].psd'
+        definition: '@shot_root/pub/photoshop/{Shot}[_{name}]_{Step}_v{version}.psd'
     # The location of the published images
     photoshop_shot_png_publish:
-        definition: '@shot_root/pub/photoshop/{Shot}_{Step}_v{version}[_{name}].png'
+        definition: '@shot_root/pub/photoshop/{Shot}[_{name}]_{Step}_v{version}.png'
     photoshop_shot_jpg_publish:
-        definition: '@shot_root/pub/photoshop/{Shot}_{Step}_v{version}[_{name}].jpg'
+        definition: '@shot_root/pub/photoshop/{Shot}[_{name}]_{Step}_v{version}.jpg'
 
     #
     # After Effects
