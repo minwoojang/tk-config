@@ -143,6 +143,14 @@ keys:
         default: ma
         alias: extension
 
+    photoshop_extension:
+        type: str
+        choices:
+            psd: Photoshop (.psd)
+            psb: Large Document Format (.psb)
+        default: psd
+        alias: extension
+
     # needed by the Alias import as reference functionality
     alias.extension:
         type: str
@@ -247,7 +255,7 @@ paths:
 
     # The location of WIP files
     photoshop_shot_work:
-        definition: '@shot_root/dev/photoshop/{Shot}[_{name}]_{Step}_v{version}.psd'
+        definition: '@shot_root/dev/photoshop/{Shot}[_{name}]_{Step}_v{version}.{photoshop_extension}'
     shot_work_area_photoshop:
         definition: '@shot_root/dev/photoshop'
     # The location of backups of WIP files
@@ -514,7 +522,7 @@ paths:
 
     # The location of WIP files
     photoshop_asset_work:
-        definition: '@asset_root/dev/photoshop/{Asset}_{Step}_v{version}[_{name}].psd'
+        definition: '@asset_root/dev/photoshop/{Asset}_{Step}_v{version}[_{name}].{photoshop_extension}'
     asset_work_area_photoshop:
         definition: '@asset_root/dev/photoshop'
     # The location of backups of WIP files
