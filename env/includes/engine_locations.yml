@@ -84,7 +84,7 @@ engines.tk-blender.location:
   linux_path: /cocoa/inhouse/shotgun/engine/tk-blender
   windows_path: O:\inhouse\shotgun\engine\tk-blender
 
-# engines.tk-blender.location:
-#   type: git
-#   path: https://github.com/diegogarciahuerta/tk-blender
-#   version: v1.1.1
+engines.tk-3de4.location:
+  type: path
+  linux_path: /cocoa/inhouse/shotgun/engine/tk-3de4
+  windows_path: O:\\inhouse\\shotgun\\engine\\tk-3de4
