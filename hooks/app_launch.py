@@ -73,10 +73,13 @@ class AppLaunch(tank.Hook):
             return {'command': command,'return_code': return_code,}
 
     def get_rez_packages(self,app_name,version,project):
-        if app_name.title() == "3De4":
+        if app_name == "3de4":
             app_name = "3de"
-
-        filter_dict = [['code','is',app_name.title()+" "+version],
+            filter_dict = [['code','is',app_name+" "+version],
+                        ['projects','in',project]
+                        ]
+        else:
+            filter_dict = [['code','is',app_name.title()+" "+version],
                         ['projects','in',project]
                         ]
         packages = self.sg.find("Software",filter_dict,['sg_rez'])
