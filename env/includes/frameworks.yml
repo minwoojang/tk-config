@@ -75,3 +75,8 @@ frameworks:
       version: v0.2.2
       type: app_store
       name: tk-framework-lmv
+  tk-framework-unrealqt_v1.x.x:
+    location:
+      type: path
+      name: tk-framework-unrealqt
+      path: O:/inhouse/shotgun/framework/tk-framework-unrealqt
