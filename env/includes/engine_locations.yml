@@ -85,14 +85,3 @@ engines.tk-blender.location: '@engines.tk-blender.location'
 engines.tk-substancepainter.location: '@engines.tk-substancepainter.location'
 engines.tk-3de4.location: '@engines.tk-3de4.location'
 
-# engines.tk-blender.location:
-#   type: path
-#   linux_path: /cocoa/inhouse/shotgun/engine/tk-blender
-#   windows_path: O:\inhouse\shotgun\engine\tk-blender
-# engines.tk-substancepainter.location:
-#   type: path
-#   windows_path: O:/inhouse/shotgun/engine/tk-substancepainter
-# engines.tk-3de4.location:
-#   type: path
-#   linux_path: /cocoa/inhouse/shotgun/engine/tk-3de4
-#   windows_path: O:\\inhouse\\shotgun\\engine\\tk-3de4

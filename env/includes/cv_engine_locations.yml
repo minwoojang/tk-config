@@ -22,8 +22,7 @@ engines.tk-blender.location:
 # Substancepainter 
 engines.tk-substancepainter.location:
   type: path
-  # windows_path: O:\\inhouse\\shotgun\\engine\\tk-substancepainter
-  windows_path: D:\\tk-substancepainter
+  windows_path: O:\\inhouse\\shotgun\\engine\\tk-substancepainter
 
 # 3de4
 engines.tk-3de4.location:
