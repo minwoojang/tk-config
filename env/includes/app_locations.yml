@@ -13,6 +13,7 @@
 
 includes:
 - ./frameworks.yml
+- ./cv_app_locations.yml
 
 ################################################################################
 # location descriptors for apps used in this configuration
@@ -76,10 +77,10 @@ apps.tk-multi-snapshot.location:
   type: app_store
   name: tk-multi-snapshot
   version: v0.9.1
-apps.tk-multi-workfiles2.location:
-  type: app_store
-  name: tk-multi-workfiles2
-  version: v0.13.6
+# apps.tk-multi-workfiles2.location:
+#   type: app_store
+#   name: tk-multi-workfiles2
+#   version: v0.13.6
 apps.tk-multi-devutils.location:
   type: app_store
   name: tk-multi-devutils
@@ -140,4 +141,7 @@ apps.tk-mari-projectmanager.location:
   name: tk-mari-projectmanager
   type: app_store
   version: v1.3.1
+
+apps.tk-multi-workfiles2.location: '@apps.tk-multi-workfiles2.location'
+
 frameworks: '@frameworks'

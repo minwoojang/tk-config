@@ -28,3 +28,11 @@ apps.tk-multi-asset_register.location:
   name: tk-multi-asset_register
   type: dev
   path: O:/inhouse/shotgun/application/tk-multi-asset_register
+
+
+# workfiles2
+apps.tk-multi-workfiles2.location:
+  name: tk-multi-workfiles2
+  type: dev
+  linux_path: dev
+  windows_path: O:\inhouse\shotgun\engine\tk-multi-workfiles2
