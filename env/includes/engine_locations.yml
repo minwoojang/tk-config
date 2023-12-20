@@ -10,6 +10,8 @@
 #
 
 # location descriptors for engines used in this configuration
+includes:
+- ./cv_engine_locations.yml
 
 ################################################################################
 
@@ -79,12 +81,7 @@ engines.tk-vred.location:
   name: tk-vred
   version: v3.0.0
 
-engines.tk-blender.location:
-  type: path
-  linux_path: /cocoa/inhouse/shotgun/engine/tk-blender
-  windows_path: O:\inhouse\shotgun\engine\tk-blender
+engines.tk-blender.location: '@engines.tk-blender.location'
+engines.tk-substancepainter.location: '@engines.tk-substancepainter.location'
+engines.tk-3de4.location: '@engines.tk-3de4.location'
 
-engines.tk-3de4.location:
-  type: path
-  linux_path: /cocoa/inhouse/shotgun/engine/tk-3de4
-  windows_path: O:\\inhouse\\shotgun\\engine\\tk-3de4

@@ -61,6 +61,12 @@ keys:
         type: int
     segment_name:
         type: str
+        
+    texture_extension:
+        type: str
+        alias: extension
+    texture_name:
+        type: str
 
     # Represents the optional output name for frames written by the Shotgun Write Node
     nuke.output:
@@ -424,36 +430,6 @@ paths:
     max_shot_publish:
         definition: '@shot_root/pub/3dsmax/{name}.v{version}.max'
 
-    #
-    # Blender
-    #
-
-    # Asset based paths
-
-    # Location of a work area
-    asset_work_area_blender:
-        definition: '@asset_root/work/blender'
-        root_name: 'primary'
-
-    # Location of a publish area
-    asset_publish_area_blender:
-        definition: '@asset_root/publish/blender'
-        root_name: 'primary'
-
-    # Location of WIP session files
-    blender_asset_work:
-        definition: '@asset_work_area_blender/{name}.v{version}.blend'
-        root_name: 'primary'
-
-    # Location of backups of WIP session files
-    blender_asset_snapshot:
-        definition: '@asset_work_area_blender/snapshots/{name}.v{version}.{timestamp}.blend'
-        root_name: 'primary'
-
-    # Location of the published session files
-    blender_asset_publish:
-        definition: '@asset_publish_area_blender/{name}.v{version}.blend'
-        root_name: 'primary'
 
     #
     # Motionbuilder
@@ -791,6 +767,89 @@ paths:
     # define the location of the published renderings for an image sequence
     vred_asset_render_sequence_publish:
         definition: '@asset_root/pub/images/{name}/v{version}/{Asset}_{name}_v{version}[-{vred.render_pass}]-{vred.frame}.{vred.render_extension}'
+
+
+    #
+    # Blender
+    #
+
+    # Asset based paths
+
+    # Location of a work area
+    asset_work_area_blender:
+        definition: '@asset_root/work/blender'
+        root_name: 'primary'
+
+    # Location of a publish area
+    asset_publish_area_blender:
+        definition: '@asset_root/publish/blender'
+        root_name: 'primary'
+
+    # Location of WIP session files
+    blender_asset_work:
+        definition: '@asset_work_area_blender/{name}.v{version}.blend'
+        root_name: 'primary'
+
+    # Location of backups of WIP session files
+    blender_asset_snapshot:
+        definition: '@asset_work_area_blender/snapshots/{name}.v{version}.{timestamp}.blend'
+        root_name: 'primary'
+
+    # Location of the published session files
+    blender_asset_publish:
+        definition: '@asset_publish_area_blender/{name}.v{version}.blend'
+        root_name: 'primary'
+
+
+    #
+    # Substance Painter
+    #
+
+    # asset
+    # define the location of a work area
+    asset_work_area_substancepainter:
+        definition: '@asset_root/dev/subs'
+        root_name: 'primary'
+    # define the location of a publish area
+    asset_publish_area_substancepainter:
+        definition: '@asset_root/pub/subs'
+        root_name: 'primary'
+
+    # The location of WIP files
+    substancepainter_asset_work:
+        # definition: '@asset_work_area_substancepainter/{name}.v{version}.spp'
+        definition: '@asset_root/dev/subs/{Asset}_{Step}_v{version}[_{name}].spp'
+        root_name: 'primary'
+
+    # The location of backups of WIP files
+    substancepainter_asset_snapshot:
+        # definition: '@asset_work_area_substancepainter/snapshots/{name}.v{version}.{timestamp}.spp'
+        definition: '@asset_root/dev/subs/snapshots/{Asset}_{Step}_v{version}[_{name}].{timestamp}.spp'
+        root_name: 'primary'
+
+    # The folder where the textures are exported for a project
+    substancepainter_asset_textures_path_export:
+        # definition: '@asset_work_area_substancepainter/export'
+        definition: '@asset_root/dev/subs/export'
+        root_name: 'primary'
+
+    # The location of published substance painter files
+    substancepainter_asset_publish:
+        # definition: '@asset_publish_area_substancepainter/{name}.v{version}.spp'
+        definition: '@asset_root/pub/subs/{Asset}_{Step}_v{version}[_{name}].spp'
+        root_name: 'primary'
+
+    # a texture folder publish
+    substancepainter_asset_textures_path_publish:
+        # definition: '@asset_publish_area_substancepainter/textures/{Asset}_textures_v{version}'
+        definition: '@asset_root/pub/subs/textures/{Asset}_textures_v{version}'
+        root_name: 'primary'
+
+    # a texture folder publish
+    substancepainter_asset_texture_path_publish:
+        # definition: '@asset_publish_area_substancepainter/textures/{Asset}_{texture_name}_v{version}.{texture_extension}'
+        definition: '@asset_root/pub/subs/textures/{Asset}_{texture_name}_v{version}.{texture_extension}'
+        root_name: 'primary'
 
 
 #

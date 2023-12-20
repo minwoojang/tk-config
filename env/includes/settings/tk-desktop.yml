@@ -57,6 +57,7 @@ settings.tk-desktop.project:
     - "*After*"
     - "*Effects*"
     - "*3DE*"
+    - "*Substance Painter*"
     name: Creative Tools
   - matches:
     - "*Hiero*"
