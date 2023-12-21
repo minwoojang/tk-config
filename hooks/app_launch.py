@@ -106,7 +106,3 @@ class AppLaunch(tank.Hook):
 
         return ''
 
-
-
-
-
