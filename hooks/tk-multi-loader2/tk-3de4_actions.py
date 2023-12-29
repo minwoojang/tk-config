@@ -30,7 +30,6 @@ from sgtk.platform.qt import QtCore, QtGui
 
 import tde4
 
-
 HookBaseClass = sgtk.get_hook_baseclass()
 
 
