@@ -136,6 +136,8 @@ settings.tk-multi-loader2.maya:
     Photoshop Image: [texture_node, image_plane]
     Rendered Image: [texture_node, image_plane]
     Texture: [texture_node, image_plane]
+    Obj File: [reference, import]
+    Maya FBX: [reference, import]
   entities:
   - caption: Assets
     entity_type: Asset
