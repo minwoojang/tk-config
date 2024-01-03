@@ -510,6 +510,20 @@ paths:
     asset_alembic_cache:
         definition: '@asset_root/pub/caches/{Asset}_{Step}_v{version}[_{name}].abc'
 
+    #
+    # Obj caches
+    #
+
+    asset_object_cache:
+        definition: '@asset_root/pub/caches/{Asset}_{Step}_v{version}[_{name}].obj'
+
+
+    #
+    # fbx caches
+    #
+    
+    asset_fbx_cache:
+        definition: '@asset_root/pub/caches/{Asset}_{Step}_v{version}[_{name}].fbx'
 
     #
     # Photoshop
