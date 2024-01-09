@@ -175,6 +175,7 @@ settings.tk-multi-loader2.nuke:
     Photoshop Image: [read_node]
     Rendered Image: [read_node]
     Texture: [read_node]
+    Plate: [read_node]
   entities:
   - caption: Assets
     entity_type: Asset
@@ -527,6 +528,9 @@ settings.tk-multi-loader2.substancepainter:
     Sbsar File: [basematerial, alpha, texture, filter, procedural, generator]
     Substance Smart Mask: [smartmask]
     Spmsk File: [smartmask]
+    Obj File: [create]
+    Maya FBX: [create]
+    Alembic Cache: [create]
   entities:
   - caption: Assets
     entity_type: Asset
