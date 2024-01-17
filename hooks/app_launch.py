@@ -1,12 +1,11 @@
-#coding:utf8
 # Copyright (c) 2013 Shotgun Software Inc.
-#
+# 
 # CONFIDENTIAL AND PROPRIETARY
-#
-# This work is provided "AS IS" and subject to the Shotgun Pipeline Toolkit
+# 
+# This work is provided "AS IS" and subject to the Shotgun Pipeline Toolkit 
 # Source Code License included in this distribution package. See LICENSE.
-# By accessing, using, copying or modifying this work you indicate your
-# agreement to the Shotgun Pipeline Toolkit Source Code License. All rights
+# By accessing, using, copying or modifying this work you indicate your 
+# agreement to the Shotgun Pipeline Toolkit Source Code License. All rights 
 # not expressly granted therein are reserved by Shotgun Software Inc.
 
 """
@@ -19,7 +18,19 @@ import os
 import re
 import sys
 import subprocess
+import platform
 import tank
+import sgtk
+
+ENGINES = {
+    'tk-houdini':'houdini',
+    'tk-maya': 'maya' ,
+    'tk-nuke': 'nuke',
+    'tk-nukestudio': 'nuke',
+    'tk-3de4' : '3de',
+    'tk-substancepainter' : "Substance Painter",
+    'tk-blender' : "blender"
+}
 
 
 
@@ -29,7 +40,6 @@ class AppLaunch(tank.Hook):
     """
     
     def execute(self, app_path, app_args, version, engine_name, **kwargs):
-        
         """
         The execute functon of the hook will be called to start the required application
         
@@ -42,60 +52,98 @@ class AppLaunch(tank.Hook):
 
         :returns: (dict) The two valid keys are 'command' (str) and 'return_code' (int).
         """
-        app_name = engine_name.split("-")[-1] #tk-nuke to nuke
+        if engine_name == "tk-photoshopcc" or engine_name == "tk-aftereffects":
+            cmd =  "start /B \"App\" \"%s\" %s" % (app_path, app_args)
+            exit_code = os.system(cmd)
+            return {"command": cmd,
+                    "return_code": exit_code
+
+                    }
+
+
+        app_name = ENGINES[engine_name]
         context = self.tank.context_from_path(self.tank.project_path)
         project = context.project
-        self.sg = self.tank.shotgun
-        packages = self.get_rez_packages(app_name,version,project)
-        try:
-            import rez as _
-        except ImportError:
-            rez_path = self.get_rez_module_root()
-            if not isinstance(rez_path, str):
-                rez_path = rez_path.decode('utf-8')
-            sys.path.append(rez_path)
+        sg = self.tank.shotgun
+        system = sys.platform
         
-        from rez import resolved_context 
+        adapter = get_adapter(platform.system())
+        packages = get_rez_packages(sg,app_name,version,system,project)
+
+        rez_path = adapter.get_rez_module_root()
+        print(rez_path)
+        if not isinstance(rez_path, str):
+            rez_path = rez_path.decode('utf-8')
+        if not rez_path:
+            raise EnvironmentError('rez is not installed and could not be automatically found. Cannot continue.')        
+        sys.path.append(rez_path)
+        from rez import resolved_context
         
-        command = 'start "App" "{path}" {args}'.format(path=app_path, args=app_args)
         if not packages:
             self.logger.debug('No rez packages were found. The default boot, instead.')
+            command = adapter.get_command(app_path, app_args)
             return_code = os.system(command)
             return {'command': command, 'return_code': return_code}
-        else:
-            context = resolved_context.ResolvedContext(packages)
-            proc = context.execute_shell(
-                command = command,
-                stdin = False,
-                block = False
-            )
-            return_code = 0
-            return {'command': command,'return_code': return_code,}
+        context = resolved_context.ResolvedContext(packages)
+        return adapter.execute(context, app_args, app_name)
+        
 
-    def get_rez_packages(self,app_name,version,project):
-        if app_name == "3de4":
-            app_name = "3de"
-            filter_dict = [['code','is',app_name+" "+version],
-                        ['projects','in',project]
-                        ]
+
+def get_rez_packages(sg,app_name,version,system,project):
+    
+    if system == "linux":
+        filter_dict = [['code','is',app_name.title()+" "+version],
+                       ['projects','in',project]
+                      ]
+        packages = sg.find("Software",filter_dict,['sg_rez'])
+        if packages : 
+            packages =  packages[0]['sg_rez']
         else:
             filter_dict = [['code','is',app_name.title()+" "+version],
-                        ['projects','in',project]
-                        ]
-        packages = self.sg.find("Software",filter_dict,['sg_rez'])
-        if packages: 
+                        ['projects','is',None] ]
+            packages = sg.find("Software",filter_dict,['sg_rez'])
             packages =  packages[0]['sg_rez']
 
-        if packages:
-            packages = [ x for x in packages.split(",")] 
+    else:
+        filter_dict = [['code','is',app_name.title()+" "+version],
+                       ['projects','in',project]
+                      ]
+        packages = sg.find("Software",filter_dict,['sg_win_rez'])
+        if packages : 
+            packages =  packages[0]['sg_win_rez']
         else:
-            packages = None
+            filter_dict = [['code','is',app_name.title()+" "+version],
+                        ['projects','is',None] ]
+            packages = sg.find("Software",filter_dict,['sg_win_rez'])
+            packages =  packages[0]['sg_win_rez']
 
-        return packages
-        
-    def get_rez_module_root(self):
+    if packages:
+        packages = [ x for x in packages.split(",")] 
+    else:
+        packages = None
 
-        command = 'rez-env rez -- echo %REZ_REZ_ROOT%'
+    return packages
+
+
+class BaseAdapter(object):
+
+
+    shell_type = 'bash'
+
+    @staticmethod
+    def get_command(path, args):
+
+        return '"{path}" {args} &'.format(path=path, args=args)
+
+    @staticmethod
+    def get_rez_root_command():
+
+        return 'rez-env rez -- printenv REZ_REZ_ROOT'
+
+    @classmethod
+    def get_rez_module_root(cls):
+
+        command = cls.get_rez_root_command()
         module_path, stderr = subprocess.Popen(
             command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True).communicate()
 
@@ -106,3 +154,69 @@ class AppLaunch(tank.Hook):
 
         return ''
 
+    @classmethod
+    def execute(cls, context, args,command):
+        os.environ['USE_SHOTGUN'] = "OK"
+        if args:
+            command += ' {args}'.format(args=args)
+        if platform.system()  == "Linux":# and command  not in  ["houdini"']:
+            # command = "mate-terminal -x bash -c '{}'".format(command)
+            command = "gnome-terminal -- bash -c '{}'".format(command)
+        print(command)
+        proc = context.execute_shell(
+            command = command,
+            #command = "gnome-terminal -x bash -c 'python'",
+            stdin = False,
+            block = False
+        )
+        
+        return_code = 0
+        context.print_info(verbosity=True)
+
+        return {
+            'command': command,
+            'return_code': return_code,
+        }
+
+
+class LinuxAdapter(BaseAdapter):
+
+
+    pass
+
+
+class WindowsAdapter(BaseAdapter):
+
+
+    shell_type = 'cmd'
+
+    @staticmethod
+    def get_command(path, args):
+        return 'start /B "App" "{path}" {args}'.format(path=path, args=args)
+
+    @staticmethod
+    def get_rez_root_command():
+
+        return 'rez-env rez -- echo %REZ_REZ_ROOT%'
+
+
+
+
+
+
+def get_adapter(system=''):
+    if not system:
+        system = platform.system()
+    
+    options = {
+        'Linux' : LinuxAdapter,
+        'Windows' : WindowsAdapter
+        }
+
+
+    try :
+        return options[system]
+
+    except KeyError:
+        raise NotImplementedError('system "{system}" is currently unsupported. Options were, "{options}"'
+                                  ''.format(system=system, options=list(options)))
