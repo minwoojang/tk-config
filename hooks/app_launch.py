@@ -83,6 +83,8 @@ class AppLaunch(tank.Hook):
             self.logger.debug('No rez packages were found. The default boot, instead.')
             command = adapter.get_command(app_path, app_args)
             return_code = os.system(command)
+            print("===================")
+            print("===================")
             return {'command': command, 'return_code': return_code}
         context = resolved_context.ResolvedContext(packages)
         return adapter.execute(context, app_args, app_name)
@@ -159,10 +161,10 @@ class BaseAdapter(object):
         os.environ['USE_SHOTGUN'] = "OK"
         if args:
             command += ' {args}'.format(args=args)
-        if platform.system()  == "Linux":# and command  not in  ["houdini"']:
-            # command = "mate-terminal -x bash -c '{}'".format(command)
-            command = "gnome-terminal -- bash -c '{}'".format(command)
-        print(command)
+        if platform.system()  == "Linux" and command  not in  ["houdini"]:
+            command = "mate-terminal -x bash -c '{}'".format(command) 
+            # command = "gnome-terminal -- bash -c '{}'".format(command)
+            print(command)
         proc = context.execute_shell(
             command = command,
             #command = "gnome-terminal -x bash -c 'python'",

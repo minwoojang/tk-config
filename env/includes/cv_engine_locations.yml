@@ -27,5 +27,5 @@ engines.tk-substancepainter.location:
 # 3de4
 engines.tk-3de4.location:
   type: path
-  linux_path: /cocoa/inhouse/shotgun/engine/tk-3de4_linux
+  linux_path: /cocoa/inhouse/shotgun/engine/tk-3de4
   windows_path: O:\\inhouse\\shotgun\\engine\\tk-3de4
