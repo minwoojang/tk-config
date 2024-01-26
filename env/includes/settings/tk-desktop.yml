@@ -20,6 +20,7 @@ includes:
 - ./tk-multi-screeningroom.yml
 - ./tk-multi-demo.yml
 - ./tk-multi-version.yml
+- ./tk-multi-plate_convert.yml
 
 ################################################################################
 
@@ -44,6 +45,7 @@ settings.tk-desktop.project:
     tk-multi-screeningroom: "@settings.tk-multi-screeningroom.rv"
     tk-multi-demo: "@settings.tk-multi-demo.standalone"
     tk-multi-version: "@settings.tk-multi-version.standalone"
+    tk-multi-plate_convert: "@settings.tk-multi-plate_convert.standalone"
   groups:
   - matches:
     - "*Fla*"
