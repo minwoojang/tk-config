@@ -46,3 +46,10 @@ apps.tk-multi-workfiles2.location:
   linux_path: /cocoa/inhouse/shotgun/engine/tk-multi-workfiles2
   windows_path: O:\\inhouse\\shotgun\\engine\\tk-multi-workfiles2
 
+
+# exr to tiff
+apps.tk-tiff.location:
+  name: tk-tiff
+  type: dev
+  windows_path: O:\\inhouse\\shotgun\\application\\tk-tiff
+  linux_path: /cocoa/inhouse/shotgun/application/tk-tiff
