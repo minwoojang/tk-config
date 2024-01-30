@@ -528,9 +528,9 @@ settings.tk-multi-loader2.substancepainter:
     Sbsar File: [basematerial, alpha, texture, filter, procedural, generator]
     Substance Smart Mask: [smartmask]
     Spmsk File: [smartmask]
-    Obj File: [create]
-    Maya FBX: [create]
-    Alembic Cache: [create]
+    Obj File: [default, UDIMs]
+    Maya FBX: [default, UDIMs]
+    Alembic Cache: [default, UDIMs]
   entities:
   - caption: Assets
     entity_type: Asset
