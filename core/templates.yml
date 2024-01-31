@@ -53,6 +53,9 @@ keys:
        type: int
        format_spec: "04"
        alias: version
+    version_two:
+       type: int
+       format_spec: "02"
     timestamp:
         type: str
     width:
@@ -148,6 +151,16 @@ keys:
             mb: Maya Binary (.mb)
         default: ma
         alias: extension
+
+    shot_file_extension:
+        type: str
+        choices:
+            usd: USD
+            abc: Alembic
+            ma: Maya Ascii
+            mb: Maya Binary
+    number:
+        type: int
 
     photoshop_extension:
         type: str
@@ -485,7 +498,17 @@ paths:
         definition: '@shot_root/review/quickdaily/{Project}_{Shot}_{name}_{iteration}.mov'
     nuke_shot_render_movie:
         definition: '@shot_root/review/{Project}_{Shot}_{nuke.output}_v{version}.mov'
-
+    #Plate
+    plate_exr:
+        definition: 'seq/{Sequence}/{Shot}/plate/org/v{version}/{Shot}_org_v{version_two}.{SEQ}.exr'
+    source_exr:
+        definition: 'seq/{Sequence}/{Shot}/plate/src{number}/v{version}/{Shot}_org_v{version_two}.{SEQ}.exr'
+    plate_dpx:
+        definition: 'seq/{Sequence}/{Shot}/plate/org/v{version}/{Shot}_org_v{version_two}.{SEQ}.dpx'
+    source_dpx:
+        definition: 'seq/{Sequence}/{Shot}/plate/src{number}/v{version}/{Shot}_org_v{version_two}.{SEQ}.dpx'
+    plate_jpg:
+        definition: 'seq/{Sequence}/{Shot}/plate/org_jpg/v{version}/{Shot}_org_v{version_two}.{SEQ}.jpg'
 
     
 
