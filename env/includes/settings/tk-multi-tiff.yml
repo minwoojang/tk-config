@@ -18,5 +18,5 @@ includes:
 
 # ---- Stand alone exr to tiff
 
-settings.tk-tiff.standalone:
-  location: "@apps.tk-tiff.location"
+settings.tk-multi-tiff.standalone:
+  location: "@apps.tk-multi-tiff.location"
