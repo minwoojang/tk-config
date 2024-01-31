@@ -508,7 +508,7 @@ paths:
     source_dpx:
         definition: 'seq/{Sequence}/{Shot}/plate/src{number}/v{version}/{Shot}_org_v{version_two}.{SEQ}.dpx'
     plate_jpg:
-        definition: 'seq/{Sequence}/{Shot}/plate/org_jpg/v{version}/{Shot}_org_v{version_two}.{SEQ}.exr'
+        definition: 'seq/{Sequence}/{Shot}/plate/org_jpg/v{version}/{Shot}_org_v{version_two}.{SEQ}.jpg'
 
     
 
