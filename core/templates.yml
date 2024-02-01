@@ -500,15 +500,15 @@ paths:
         definition: '@shot_root/review/{Project}_{Shot}_{nuke.output}_v{version}.mov'
     #Plate
     plate_exr:
-        definition: 'seq/{Sequence}/{Shot}/plate/org/v{version}/{Shot}_org_v{version_two}.{SEQ}.exr'
+        definition: 'seq/{Sequence}/{Shot}/plate/org/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.exr'
     source_exr:
-        definition: 'seq/{Sequence}/{Shot}/plate/src{number}/v{version}/{Shot}_org_v{version_two}.{SEQ}.exr'
+        definition: 'seq/{Sequence}/{Shot}/plate/src{number}/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.exr'
     plate_dpx:
-        definition: 'seq/{Sequence}/{Shot}/plate/org/v{version}/{Shot}_org_v{version_two}.{SEQ}.dpx'
+        definition: 'seq/{Sequence}/{Shot}/plate/org/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.dpx'
     source_dpx:
-        definition: 'seq/{Sequence}/{Shot}/plate/src{number}/v{version}/{Shot}_org_v{version_two}.{SEQ}.dpx'
+        definition: 'seq/{Sequence}/{Shot}/plate/src{number}/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.dpx'
     plate_jpg:
-        definition: 'seq/{Sequence}/{Shot}/plate/org_jpg/v{version}/{Shot}_org_v{version_two}.{SEQ}.jpg'
+        definition: 'seq/{Sequence}/{Shot}/plate/org_jpg/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.jpg'
 
     
 

@@ -64,6 +64,7 @@ class AppLaunch(tank.Hook):
         app_name = ENGINES[engine_name]
         context = self.tank.context_from_path(self.tank.project_path)
         project = context.project
+        os.environ['PROJECT'] = project
         sg = self.tank.shotgun
         system = sys.platform
         
