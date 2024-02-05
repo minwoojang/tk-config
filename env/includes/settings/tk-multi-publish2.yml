@@ -203,11 +203,11 @@ settings.tk-multi-publish2.maya.asset_step:
 
 # shot step
 settings.tk-multi-publish2.maya.shot_step:
-  collector: "{self}/collector.py:{engine}/tk-multi-publish2/basic/collector.py"
+  collector: "{self}/collector.py:{config}/tk-multi-publish2/maya/shot/shot_collector.py"
   collector_settings:
       Work Template: maya_shot_work
   publish_plugins:
-  - name: Publish to ShotGrid
+  - name: Publish to Shotgun
     hook: "{self}/publish_file.py"
     settings: {}
   - name: Upload for review
@@ -216,10 +216,30 @@ settings.tk-multi-publish2.maya.shot_step:
   - name: Begin file versioning
     hook: "{engine}/tk-multi-publish2/basic/start_version_control.py"
     settings: {}
-  - name: Publish to ShotGrid
+  - name: Publish to Shotgun
     hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session.py"
     settings:
         Publish Template: maya_shot_publish
+  - name: Export Alembic
+    hook: "{self}/publish_file.py:{config}/tk-multi-publish2/maya/shot/publish_component_abc.py"
+    settings:
+        Publish Template: shot_component_alembic
+  - name: Publish to Shotgun
+    hook: "{self}/publish_file.py:{config}/tk-multi-publish2/maya/shot/publish_camera_abc.py"
+    settings:
+        Publish Template: shot_camera_dummy
+  - name: Publish to Shotgun
+    hook: "{self}/publish_file.py:{config}/tk-multi-publish2/maya/shot/publish_camera_ma.py"
+    settings:
+        Publish Template: shot_camera_dummy
+  - name: Publish to Shotgun
+    hook: "{self}/publish_file.py:{config}/tk-multi-publish2/maya/shot/publish_dummy_abc.py"
+    settings:
+        Publish Template: shot_camera_dummy
+  - name: Publish to Shotgun
+    hook: "{self}/publish_file.py:{config}/tk-multi-publish2/maya/shot/publish_set_abc.py"
+    settings:
+        Publish Template: shot_component_alembic
   help_url: *help_url
   location: "@apps.tk-multi-publish2.location"
 

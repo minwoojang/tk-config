@@ -151,6 +151,10 @@ keys:
             mb: Maya Binary (.mb)
         default: ma
         alias: extension
+    tail:
+        type: str
+    asset_namespace:
+        type: str
 
     shot_file_extension:
         type: str
@@ -532,6 +536,7 @@ paths:
 
     asset_alembic_cache:
         definition: '@asset_root/pub/caches/{Asset}_{Step}_v{version}[_{name}].abc'
+    
 
     #
     # Obj caches
@@ -547,6 +552,30 @@ paths:
     
     asset_fbx_cache:
         definition: '@asset_root/pub/caches/{Asset}_{Step}_v{version}[_{name}].fbx'
+
+
+    ##########################################################################################
+    # Shot pipeline
+
+    usd_asset_root:
+        definition: '_3d/assets/{Asset}/{Asset}.usd'
+    usd_asset_step:
+        definition: '_3d/assets/{Asset}/{Step}/{Step}.usd'
+    usd_asset_step_version:
+        definition: '_3d/assets/{Asset}/{Step}/v{version}/{Asset}_{Step}.usd'
+    usd_asset_texture_path:
+        definition: "_3d/assets/{Asset}/binder/v{version}/{Asset}_collection.usd"
+
+
+    #pub caches
+    shot_component_alembic:
+        definition: '@shot_root/pub/caches/abc/{asset_namespace}_{Step}_v{version}[_{name}].abc'
+    shot_cmpt_asmb_usd:
+        definition: '@shot_root/pub/caches/usd/{asset_namespace}_{Step}_v{version}[_{name}].usd'
+    shot_usd:
+        definition: '@shot_root/pub/caches/usd/{Shot}_{Step}_v{version}[_{name}].usd'
+    shot_camera_dummy:
+        definition: '@shot_root/pub/caches/{shot_file_extension}/{name}_{Step}_v{version}[_{name}].{shot_file_extension}'
 
     #
     # Photoshop
