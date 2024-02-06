@@ -569,13 +569,13 @@ paths:
 
     #pub caches
     shot_component_alembic:
-        definition: '@shot_root/pub/caches/abc/{asset_namespace}_{Step}_v{version}[_{name}].abc'
+        definition: '@shot_root/pub/caches/abc/v{version}/{asset_namespace}_{Step}_v{version}[_{name}].abc'
     shot_cmpt_asmb_usd:
-        definition: '@shot_root/pub/caches/usd/{asset_namespace}_{Step}_v{version}[_{name}].usd'
+        definition: '@shot_root/pub/caches/usd/v{version}/{asset_namespace}_{Step}_v{version}[_{name}].usd'
     shot_usd:
-        definition: '@shot_root/pub/caches/usd/{Shot}_{Step}_v{version}[_{name}].usd'
+        definition: '@shot_root/pub/caches/usd/v{version}/{Shot}_{Step}_v{version}[_{name}].usd'
     shot_camera_dummy:
-        definition: '@shot_root/pub/caches/{shot_file_extension}/{name}_{Step}_v{version}[_{name}].{shot_file_extension}'
+        definition: '@shot_root/pub/caches/{shot_file_extension}/v{version}/{name}_{Step}_v{version}[_{name}].{shot_file_extension}'
 
     #
     # Photoshop
