@@ -468,7 +468,6 @@ paths:
     mobu_shot_publish:
         definition: '@shot_root/publish/mobu/{name}.v{version}.fbx'
 
-
     #
     # Nuke
     #
@@ -513,6 +512,21 @@ paths:
         definition: 'seq/{Sequence}/{Shot}/plate/src{number}/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.dpx'
     plate_jpg:
         definition: 'seq/{Sequence}/{Shot}/plate/org_jpg/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.jpg'
+    # nuke_write
+    nuke_write_exr:
+        definition: '@shot_root/dev/nuke/write/{Project}_{Shot}_{Step}_v{version}/{Project}_{Shot}_{Step}_v{version}[_{name}].{SEQ}.exr'
+    nuke_write_dpx:
+        definition: '@shot_root/dev/nuke/write/{Project}_{Shot}_{Step}_v{version}/{Project}_{Shot}_{Step}_v{version}[_{name}].{SEQ}.dpx'
+    nuke_write_jpg:
+        definition: '@shot_root/dev/nuke/write/{Project}_{Shot}_{Step}_v{version}/{Project}_{Shot}_{Step}_v{version}[_{name}].{SEQ}.jpg'
+    nuke_write_mov:
+        definition: '@shot_root/dev/nuke/write/{Project}_{Shot}_{Step}_v{version}[_{name}].mov'
+    # precomp
+    nuke_precomp_exr:
+        definition: '@shot_root/dev/nuke/precomp/{Project}_{Shot}_{Step}_v{version}_precomp/{Project}_{Shot}_{Step}_v{version}[_{name}]_precomp.{SEQ}.exr'
+    nuke_precomp_dpx:
+        definition: '@shot_root/dev/nuke/precomp/{Project}_{Shot}_{Step}_v{version}_precomp/{Project}_{Shot}_{Step}_v{version}[_{name}]_precomp.{SEQ}.dpx'
+
 
     
 
