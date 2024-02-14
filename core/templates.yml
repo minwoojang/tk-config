@@ -468,6 +468,7 @@ paths:
     mobu_shot_publish:
         definition: '@shot_root/publish/mobu/{name}.v{version}.fbx'
 
+
     #
     # Nuke
     #
@@ -512,6 +513,13 @@ paths:
         definition: 'seq/{Sequence}/{Shot}/plate/src{number}/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.dpx'
     plate_jpg:
         definition: 'seq/{Sequence}/{Shot}/plate/org_jpg/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.jpg'
+    # retime
+    retime_exr:
+        definition: 'seq/{Sequence}/{Shot}/plate/retime/v{version}/{Project}_{Shot}_retime_v{version}.{SEQ}.exr'
+    retime_dpx:
+        definition: 'seq/{Sequence}/{Shot}/plate/retime/v{version}/{Project}_{Shot}_retime_v{version}.{SEQ}.dpx'
+    retime_jpg:
+        definition: 'seq/{Sequence}/{Shot}/plate/retime_jpg/v{version}/{Project}_{Shot}_retime_v{version}.{SEQ}.jpg'    
     # nuke_write
     nuke_write_exr:
         definition: '@shot_root/dev/nuke/write/{Project}_{Shot}_{Step}_v{version}/{Project}_{Shot}_{Step}_v{version}[_{name}].{SEQ}.exr'
