@@ -601,6 +601,11 @@ paths:
     shot_camera_dummy:
         definition: '@shot_root/pub/caches/{shot_file_extension}/v{version}/{name}_{Step}_v{version}[_{name}].{shot_file_extension}'
 
+
+    # houdini using import mm and ani publish path info
+    fx_alembic_for_shot:
+        definition: '@shot_root/pub/caches/abc/'
+
     #
     # Photoshop
     #
