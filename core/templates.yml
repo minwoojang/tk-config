@@ -506,7 +506,7 @@ paths:
     plate_exr:
         definition: 'seq/{Sequence}/{Shot}/plate/org/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.exr'
     plate_mov:
-        definition: 'seq/{Sequence}/{Shot}/plate/org/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.mov'
+        definition: 'seq/{Sequence}/{Shot}/plate/org/v{version}/{Project}_{Shot}_org_v{version}.mov'
     source_exr:
         definition: 'seq/{Sequence}/{Shot}/plate/src{number}/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.exr'
     plate_dpx:
