@@ -502,7 +502,7 @@ paths:
         definition: '@shot_root/review/quickdaily/{Project}_{Shot}_{name}_{iteration}.mov'
     nuke_shot_render_movie:
         definition: '@shot_root/review/{Project}_{Shot}_{nuke.output}_v{version}.mov'
-    #Plate
+    # Plate
     plate_exr:
         definition: 'seq/{Sequence}/{Shot}/plate/org/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.exr'
     plate_mov:
@@ -515,6 +515,8 @@ paths:
         definition: 'seq/{Sequence}/{Shot}/plate/src{number}/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.dpx'
     plate_jpg:
         definition: 'seq/{Sequence}/{Shot}/plate/org_jpg/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.jpg'
+    plate_tiff:
+        definition: 'seq/{Sequence}/{Shot}/plate/tiff_matte/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.tiff' 
     # retime
     retime_exr:
         definition: 'seq/{Sequence}/{Shot}/plate/retime/v{version}/{Project}_{Shot}_retime_v{version}.{SEQ}.exr'
@@ -530,7 +532,6 @@ paths:
     # nuke_write_jpg:
         # definition: '@shot_root/dev/nuke/write/{Project}_{Shot}_{Step}_v{version}/{Project}_{Shot}_{Step}_v{version}[_{name}].{SEQ}.jpg'
     nuke_write_mov:
-        # definition: '@shot_root/dev/nuke/write/{Project}_{Shot}_{Step}_v{version}[_{name}].mov'
         definition: '@shot_root/preview/{Project}_{Shot}_{Step}_v{version}/{Project}_{Shot}_{Step}_v{version}[_{name}].mov'
     # precomp
     nuke_precomp_exr:
