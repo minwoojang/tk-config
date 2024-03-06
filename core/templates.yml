@@ -516,7 +516,7 @@ paths:
     plate_jpg:
         definition: 'seq/{Sequence}/{Shot}/plate/org_jpg/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.jpg'
     plate_tiff:
-        definition: 'seq/{Sequence}/{Shot}/plate/tiff_matte/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.tiff' 
+        definition: 'seq/{Sequence}/{Shot}/plate/org_tiff/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.tiff' 
     # retime
     retime_exr:
         definition: 'seq/{Sequence}/{Shot}/plate/retime/v{version}/{Project}_{Shot}_retime_v{version}.{SEQ}.exr'
