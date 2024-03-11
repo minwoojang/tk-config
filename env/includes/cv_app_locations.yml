@@ -47,6 +47,14 @@ apps.tk-multi-workfiles2.location:
   windows_path: O:\\inhouse\\shotgun\\engine\\tk-multi-workfiles2
 
 
+# # io
+# apps.tk-in-out-manager.location:
+#   name: tk-in-out-manager
+#   type: dev
+#   linux_path: /cocoa/inhouse/shotgun/application/tk-io
+#   windows_path: O:\\inhouse\\\shotgun\\application\tk-io
+
+
 # exr to tiff
 apps.tk-multi-tiff.location:
   name: tk-multi-tiff
