@@ -173,8 +173,8 @@ class BaseAdapter(object):
             command += ' {args}'.format(args=args)
 
         if platform.system()  == "Linux" and command  not in  ["houdini"]:
-            command = "mate-terminal -x bash -c '{}'".format(command) 
-            # command = "gnome-terminal -- bash -c '{}'".format(command)
+            # command = "mate-terminal -x bash -c '{}'".format(command) 
+            command = "gnome-terminal -- bash -c '{}'".format(command)
             print(command)
         proc = context.execute_shell(
             command = command,

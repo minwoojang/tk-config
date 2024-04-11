@@ -44,7 +44,7 @@ apps.tk-multi-workfiles2.location:
   name: tk-multi-workfiles2
   type: dev
   linux_path: /cocoa/inhouse/shotgun/engine/tk-multi-workfiles2
-  windows_path: O:\\inhouse\\shotgun\\engine\\tk-multi-workfiles2
+  windows_path: O:/inhouse/shotgun/engine/tk-multi-workfiles2
 
 
 # # io
@@ -52,12 +52,20 @@ apps.tk-multi-workfiles2.location:
 #   name: tk-in-out-manager
 #   type: dev
 #   linux_path: /cocoa/inhouse/shotgun/application/tk-io
-#   windows_path: O:\\inhouse\\\shotgun\\application\tk-io
+#   windows_path: O:/inhouse/shotgun/application/tk-io
 
 
 # exr to tiff
 apps.tk-multi-tiff.location:
   name: tk-multi-tiff
   type: dev
-  windows_path: O:\\inhouse\\shotgun\\application\\tk-multi-tiff
+  windows_path: O:/inhouse/shotgun/application/tk-multi-tiff
   linux_path: /cocoa/inhouse/shotgun/application/tk-multi-tiff
+
+
+# # tk-multi-register-data
+# apps.tk-multi-register_data.location:
+#   name: tk-multi-register_data
+#   type: dev
+#   windows_path: O:/inhouse/shotgun/application/tk-multi-register-data
+#   linux_path: /cocoa/inhouse/shotgun/application/tk-multi-register-data

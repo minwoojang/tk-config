@@ -18,5 +18,6 @@ includes:
 
 # ---- Stand alone publish
 
-settings.tk-in-out-manager.standalone:
-  location: "@apps.tk-in-out-manager.location"
+settings.tk-multi-register_data.standalone:
+  location: "@apps.tk-multi-register_data.location"
+  
