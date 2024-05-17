@@ -63,7 +63,7 @@ apps.tk-multi-tiff.location:
   linux_path: /cocoa/inhouse/shotgun/application/tk-multi-tiff
 
 
-# # tk-multi-register-data
+# tk-multi-register-data
 # apps.tk-multi-register_data.location:
 #   name: tk-multi-register_data
 #   type: dev

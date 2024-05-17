@@ -64,6 +64,9 @@ class AppLaunch(tank.Hook):
 
 
         app_name = ENGINES[engine_name]
+        print("-------------------------------")
+        print(app_name)
+        print("-------------------------------")
         context = self.tank.context_from_path(self.tank.project_path)
         project = context.project
         sg = self.tank.shotgun
@@ -71,8 +74,13 @@ class AppLaunch(tank.Hook):
 
         adapter = get_adapter(platform.system())               
         packages = get_rez_packages(sg, app_name, version, system, project)
-
+        print("-------------------rez packages--------------------")
+        print(packages)
+        print("-------------------rez packages--------------------")
         rez_path = adapter.get_rez_module_root()
+        print("---------------------rez path----------------------")
+        print(rez_path)
+        print("---------------------rez path----------------------")
         
         if not isinstance(rez_path, str):
             rez_path = rez_path.decode('utf-8')
