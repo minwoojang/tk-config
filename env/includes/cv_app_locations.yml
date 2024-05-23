@@ -22,7 +22,8 @@ apps.tk-multi-version.location:
   name: tk-multi-version
   type: dev
   windows_path: O:/inhouse/shotgun/application/tk-multi-version
-  linux_path: /cocoa/inhouse/shotgun//application/tk-multi-version-linux
+  # linux_path: /cocoa/inhouse/shotgun//application/tk-multi-version-linux
+  linux_path: /cocoa/inhouse/shotgun/application/tk-multi-version
 
 
 # register asset list tool
