@@ -22,7 +22,7 @@ includes:
 - ./tk-multi-version.yml
 - ./tk-multi-plate_convert.yml
 - ./tk-multi-tiff.yml
-- ./tk-in-out-manager.yml
+# - ./tk-in-out-manager.yml
 - ./tk-outsourcing.yml
 # - ./tk-multi-register_data.yml
 
