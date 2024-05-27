@@ -70,3 +70,11 @@ apps.tk-multi-tiff.location:
 #   type: dev
 #   windows_path: O:/inhouse/shotgun/application/tk-multi-register-data
 #   linux_path: /cocoa/inhouse/shotgun/application/tk-multi-register-data
+
+
+# outsourcing
+apps.tk-outsourcing.location:
+  name: tk-outsourcing
+  type: dev
+  windows_path: O:\inhouse\shotgun\application\tk-outsourcing
+  linux_path: /cocoa/inhouse/shotgun/application/tk-outsourcing

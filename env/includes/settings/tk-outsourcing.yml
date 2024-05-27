@@ -18,6 +18,5 @@ includes:
 
 # ---- Stand alone publish
 
-# settings.tk-multi-register_data.standalone:
-  # location: "@apps.tk-multi-register_data.location"
-  
+settings.tk-outsourcing.standalone:
+  location: "@apps.tk-outsourcing.location"
