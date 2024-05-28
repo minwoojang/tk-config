@@ -413,19 +413,19 @@ paths:
 
     # define the location of a work area
     shot_work_area_3de4:
-        definition: '@shot_root/dev/3de4'
+        definition: '@shot_root/dev/3de'
     # define the location of a publish area
     shot_publish_area_3de4:
-        definition: '@shot_root/pub/3de4'
+        definition: '@shot_root/pub/3de'
     # The location of WIP files
     3de4_shot_work:
-        definition: '@shot_root/dev/3de4/{Shot}_{Step}_v{version}.3de'
+        definition: '@shot_root/dev/3de/{Shot}_{Step}_v{version}.3de'
     # The location of backups of WIP files
     3de4_shot_snapshot:
-        definition: '@shot_root/dev/3de4/snapshots/{Shot}_{Step}_v{version}.{timestamp}.3de'
+        definition: '@shot_root/dev/3de/snapshots/{Shot}_{Step}_v{version}.{timestamp}.3de'
     # The location of published maya files
     3de4_shot_publish:
-        definition: '@shot_root/pub/3de4/{Shot}_{Step}_v{version}.3de' 
+        definition: '@shot_root/pub/3de/{Shot}_{Step}_v{version}.3de' 
 
     #
     # 3dsmax
