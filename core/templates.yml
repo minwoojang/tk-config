@@ -165,6 +165,9 @@ keys:
             mb: Maya Binary
     number:
         type: int
+    src_number:
+        type: int
+        format_spec: "02"
 
     photoshop_extension:
         type: str
@@ -508,11 +511,11 @@ paths:
     plate_mov:
         definition: 'seq/{Sequence}/{Shot}/plate/org/v{version}/{Project}_{Shot}_org_v{version}.mov'
     source_exr:
-        definition: 'seq/{Sequence}/{Shot}/plate/src{number}/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.exr'
+        definition: 'seq/{Sequence}/{Shot}/plate/src{src_number}/v{version}/{Project}_{Shot}_src{src_number}_v{version}.{SEQ}.exr'
     plate_dpx:
         definition: 'seq/{Sequence}/{Shot}/plate/org/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.dpx'
     source_dpx:
-        definition: 'seq/{Sequence}/{Shot}/plate/src{number}/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.dpx'
+        definition: 'seq/{Sequence}/{Shot}/plate/src{src_number}/v{version}/{Project}_{Shot}_src{src_number}_v{version}.{SEQ}.dpx'
     plate_jpg:
         definition: 'seq/{Sequence}/{Shot}/plate/org_jpg/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.jpg'
     plate_tiff:
