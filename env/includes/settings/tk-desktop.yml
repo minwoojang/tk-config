@@ -22,9 +22,8 @@ includes:
 - ./tk-multi-version.yml
 - ./tk-multi-plate_convert.yml
 - ./tk-multi-tiff.yml
-# - ./tk-in-out-manager.yml
+# - ./tk-datamanager.yml
 - ./tk-outsourcing.yml
-# - ./tk-multi-register_data.yml
 
 ################################################################################
 
@@ -51,10 +50,8 @@ settings.tk-desktop.project:
     tk-multi-version: "@settings.tk-multi-version.standalone"
     tk-multi-plate_convert: "@settings.tk-multi-plate_convert.standalone"
     tk-multi-tiff: "@settings.tk-multi-tiff.standalone"
-    # tk-in-out-manager: "@settings.tk-in-out-manager.standalone"
+    # tk-datamanager: "@settings.tk-datamanager.standalone"
     tk-outsourcing: "@settings.tk-outsourcing.standalone"
-    # tk-io: "@settings.tk-in-out-manager.standalone"
-    # tk-multi-register_data: "@settings.tk-multi-register_data.standalone"
   groups:
   - matches:
     - "*Fla*"

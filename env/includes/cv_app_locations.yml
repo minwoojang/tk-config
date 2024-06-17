@@ -22,7 +22,6 @@ apps.tk-multi-version.location:
   name: tk-multi-version
   type: dev
   windows_path: O:/inhouse/shotgun/application/tk-multi-version
-  # linux_path: /cocoa/inhouse/shotgun//application/tk-multi-version-linux
   linux_path: /cocoa/inhouse/shotgun/application/tk-multi-version
 
 
@@ -32,7 +31,7 @@ apps.tk-multi-asset_register.location:
   type: dev
   path: O:/inhouse/shotgun/application/tk-multi-asset_register
 
-#plate convert
+# plate convert
 apps.tk-multi-plate_convert.location:
   name: tk-plate_convert
   type: dev
@@ -48,12 +47,12 @@ apps.tk-multi-workfiles2.location:
   windows_path: O:/inhouse/shotgun/engine/tk-multi-workfiles2
 
 
-# # io
-# apps.tk-in-out-manager.location:
-#   name: tk-in-out-manager
+# # Data Manager
+# apps.tk-datamanager.location:
+#   name: tk-datamanager
 #   type: dev
-#   linux_path: /cocoa/inhouse/shotgun/application/tk-io
-#   windows_path: O:/inhouse/shotgun/application/tk-io
+#   linux_path: /cocoa/inhouse/shotgun/application/tk-datamanager
+#   windows_path: O:/inhouse/shotgun/application/tk-datamanager
 
 
 # exr to tiff
@@ -62,19 +61,19 @@ apps.tk-multi-tiff.location:
   type: dev
   windows_path: O:/inhouse/shotgun/application/tk-multi-tiff
   linux_path: /cocoa/inhouse/shotgun/application/tk-multi-tiff
-
-
-# tk-multi-register-data
-# apps.tk-multi-register_data.location:
-#   name: tk-multi-register_data
-#   type: dev
-#   windows_path: O:/inhouse/shotgun/application/tk-multi-register-data
-#   linux_path: /cocoa/inhouse/shotgun/application/tk-multi-register-data
-
+  
 
 # outsourcing
 apps.tk-outsourcing.location:
   name: tk-outsourcing
   type: dev
-  windows_path: O:\inhouse\shotgun\application\tk-outsourcing
+  windows_path: O:/inhouse/shotgun/application/tk-outsourcing
   linux_path: /cocoa/inhouse/shotgun/application/tk-outsourcing
+
+
+# # tk-multi-register-data
+# apps.tk-multi-register_data.location:
+#   name: tk-multi-register_data
+#   type: dev
+#   windows_path: O:/inhouse/shotgun/application/tk-multi-register-data
+#   linux_path: /cocoa/inhouse/shotgun/application/tk-multi-register-data
