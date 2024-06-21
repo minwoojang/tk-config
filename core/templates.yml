@@ -641,17 +641,17 @@ paths:
 
     # The location of WIP files
     aftereffects_asset_work:
-        definition: '@asset_root/dev/afx/{Shot}_{Step}_v{version}[_{name}].aep'
+        definition: '@asset_root/dev/afx/{Asset}_{Step}_v{version}[_{name}].aep'
     asset_work_area_aftereffects:
         definition: '@asset_root/dev/afx'
     # The location of backups of WIP files
     aftereffects_asset_snapshot:
-        definition: '@asset_root/dev/afx/snapshots/{Shot}_{Step}_v{version}[_{name}].{timestamp}.aep'
+        definition: '@asset_root/dev/afx/snapshots/{Asset}_{Step}_v{version}[_{name}].{timestamp}.aep'
     # The location of published files
     asset_publish_area_aftereffects:
         definition: '@asset_root/pub/afx'
     aftereffects_asset_publish:
-        definition: '@asset_root/pub/afx/{Shot}_{Step}_v{version}[_{name}].aep'
+        definition: '@asset_root/pub/afx/{Asset}_{Step}_v{version}[_{name}].aep'
     aftereffects_asset_render_pub_mono:
         definition: '@asset_root/pub/elements/{name}/v{version}/{width}x{height}/{Asset}_{name}_{afx.comp}_v{version}.{SEQ}.tif'
     # The following template uses {afx.mov.ext} this is a special key, that will be only there
