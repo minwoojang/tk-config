@@ -47,12 +47,12 @@ apps.tk-multi-workfiles2.location:
   windows_path: O:/inhouse/shotgun/engine/tk-multi-workfiles2
 
 
-# # Data Manager
-# apps.tk-datamanager.location:
-#   name: tk-datamanager
-#   type: dev
-#   linux_path: /cocoa/inhouse/shotgun/application/tk-datamanager
-#   windows_path: O:/inhouse/shotgun/application/tk-datamanager
+# Data Manager
+apps.tk-datamanager.location:
+  name: tk-datamanager
+  type: dev
+  linux_path: /cocoa/inhouse/shotgun/application/tk-datamanager
+  windows_path: O:/inhouse/shotgun/application/tk-datamanager
 
 
 # exr to tiff
