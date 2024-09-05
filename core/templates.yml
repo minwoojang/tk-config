@@ -324,6 +324,24 @@ paths:
     aftereffects_shot_render_movie:
         definition: '@shot_root/review/{Shot}_{name}_{afx.comp}_v{version}.{afx.mov.ext}'
 
+    # cocoa after effects pub path
+    aftereffects_shot_render_pub_tif:
+        definition: '@shot_root/pub/{Project}_{Shot}_{Step}_v{version}/{Project}_{Shot}_{Step}_v{version}.{SEQ}.tif'
+    aftereffects_shot_render_pub_exr:
+        definition: '@shot_root/pub/{Project}_{Shot}_{Step}_v{version}/{Project}_{Shot}_{Step}_v{version}.{SEQ}.exr'
+    aftereffects_shot_render_pub_dpx:
+        definition: '@shot_root/pub/{Project}_{Shot}_{Step}_v{version}/{Project}_{Shot}_{Step}_v{version}.{SEQ}.dpx'
+    aftereffects_shot_render_pub_tga:
+        definition: '@shot_root/pub/{Project}_{Shot}_{Step}_v{version}/{Project}_{Shot}_{Step}_v{version}.{SEQ}.tga'
+    aftereffects_shot_render_pub_png:
+        definition: '@shot_root/pub/{Project}_{Shot}_{Step}_v{version}/{Project}_{Shot}_{Step}_v{version}.{SEQ}.png'
+    aftereffects_shot_render_pub_jpg:
+        definition: '@shot_root/pub/{Project}_{Shot}_{Step}_v{version}/{Project}_{Shot}_{Step}_v{version}.{SEQ}.jpg'
+    aftereffects_shot_render_pub_mov:
+        definition: '@shot_root/pub/{Project}_{Shot}_{Step}_v{version}.mov'
+    aftereffects_shot_render_pub_avi:
+        definition: '@shot_root/pub/{Project}_{Shot}_{Step}_v{version}.avi'
+
     #
     # Blender
     #
@@ -639,23 +657,24 @@ paths:
         definition: '@asset_root/pub/photoshop/{Asset}_{Step}_v{version}[_{name}].png'
     photoshop_asset_jpg_publish:
         definition: '@asset_root/pub/photoshop/{Asset}_{Step}_v{version}[_{name}].jpg'
+
     #
     # after effects
     #
 
     # The location of WIP files
     aftereffects_asset_work:
-        definition: '@asset_root/dev/afx/{Asset}_{Step}_v{version}[_{name}].aep'
+        definition: '@asset_root/dev/afx/{Project}_{Asset}_{Step}_v{version}[_{name}].aep'
     asset_work_area_aftereffects:
         definition: '@asset_root/dev/afx'
     # The location of backups of WIP files
     aftereffects_asset_snapshot:
-        definition: '@asset_root/dev/afx/snapshots/{Asset}_{Step}_v{version}[_{name}].{timestamp}.aep'
+        definition: '@asset_root/dev/afx/snapshots/{Project}_{Asset}_{Step}_v{version}[_{name}].{timestamp}.aep'
     # The location of published files
     asset_publish_area_aftereffects:
         definition: '@asset_root/pub/afx'
     aftereffects_asset_publish:
-        definition: '@asset_root/pub/afx/{Asset}_{Step}_v{version}[_{name}].aep'
+        definition: '@asset_root/pub/afx/{Project}_{Asset}_{Step}_v{version}[_{name}].aep'
     aftereffects_asset_render_pub_mono:
         definition: '@asset_root/pub/elements/{name}/v{version}/{width}x{height}/{Asset}_{name}_{afx.comp}_v{version}.{SEQ}.tif'
     # The following template uses {afx.mov.ext} this is a special key, that will be only there
@@ -663,6 +682,24 @@ paths:
     # output module (Lossless with Alpha)
     aftereffects_asset_render_movie:
         definition: '@asset_root/review/{Asset}_{name}_{afx.comp}_v{version}.{afx.mov.ext}'
+
+    # cocoa after effects pub path
+    aftereffects_asset_render_pub_tif:
+        definition: '@asset_root/pub/{Project}_{Asset}_{Step}_v{version}/{Project}_{Asset}_{Step}_v{version}.{SEQ}.tif'
+    aftereffects_asset_render_pub_exr:
+        definition: '@asset_root/pub/{Project}_{Asset}_{Step}_v{version}/{Project}_{Asset}_{Step}_v{version}.{SEQ}.exr'
+    aftereffects_asset_render_pub_dpx:
+        definition: '@asset_root/pub/{Project}_{Asset}_{Step}_v{version}/{Project}_{Asset}_{Step}_v{version}.{SEQ}.dpx'
+    aftereffects_asset_render_pub_tga:
+        definition: '@asset_root/pub/{Project}_{Asset}_{Step}_v{version}/{Project}_{Asset}_{Step}_v{version}.{SEQ}.tga'
+    aftereffects_asset_render_pub_png:
+        definition: '@asset_root/pub/{Project}_{Asset}_{Step}_v{version}/{Project}_{Asset}_{Step}_v{version}.{SEQ}.png'
+    aftereffects_asset_render_pub_jpg:
+        definition: '@asset_root/pub/{Project}_{Asset}_{Step}_v{version}/{Project}_{Asset}_{Step}_v{version}.{SEQ}.jpg'
+    aftereffects_asset_render_pub_mov:
+        definition: '@asset_root/pub/{Project}_{Asset}_{Step}_v{version}.mov'
+    aftereffects_asset_render_pub_avi:
+        definition: '@asset_root/pub/{Project}_{Asset}_{Step}_v{version}.avi'
 
 
     #
