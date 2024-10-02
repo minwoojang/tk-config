@@ -68,7 +68,15 @@ apps.tk-outsourcing.location:
   name: tk-outsourcing
   type: dev
   windows_path: O:/inhouse/shotgun/application/tk-outsourcing
-  linux_path: /cocoa/inhouse/shotgun/application/tk-outsourcing
+  linux_path: /cocoa/inhouse/shotgun/application/_tk-outsourcing
+
+# tractor spool
+apps.tk-multi-tractor.location:
+  name: tk-multi-tractor
+  type: dev
+  windows_path: O:/inhouse/shotgun/application/tk-multi-tractor
+  linux_path: /cocoa/inhouse/shotgun/application/tk-multi-tractor 
+  
 
 
 # # tk-multi-register-data

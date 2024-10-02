@@ -143,5 +143,6 @@ apps.tk-mari-projectmanager.location:
   version: v1.3.1
 
 apps.tk-multi-workfiles2.location: '@apps.tk-multi-workfiles2.location'
+apps.tk-multi-tractor.location: '@apps.tk-multi-tractor.location'
 
 frameworks: '@frameworks'
