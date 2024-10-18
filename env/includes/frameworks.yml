@@ -79,4 +79,5 @@ frameworks:
     location:
       type: path
       name: tk-framework-unrealqt
-      path: O:/inhouse/shotgun/framework/tk-framework-unrealqt
+      windows_path: O:/inhouse/shotgun/framework/tk-framework-unrealqt
+      linux_path: /cocoa/inhouse/shotgun/framework/tk-framework-unrealqt
