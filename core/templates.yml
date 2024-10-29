@@ -527,14 +527,16 @@ paths:
     # Plate
     plate_exr:
         definition: 'seq/{Sequence}/{Shot}/plate/org/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.exr'
-    plate_mov:
-        definition: 'seq/{Sequence}/{Shot}/plate/org/v{version}/{Project}_{Shot}_org_v{version}.mov'
     source_exr:
         definition: 'seq/{Sequence}/{Shot}/plate/src{src_number}/v{version}/{Project}_{Shot}_src{src_number}_v{version}.{SEQ}.exr'
     plate_dpx:
         definition: 'seq/{Sequence}/{Shot}/plate/org/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.dpx'
     source_dpx:
         definition: 'seq/{Sequence}/{Shot}/plate/src{src_number}/v{version}/{Project}_{Shot}_src{src_number}_v{version}.{SEQ}.dpx'
+    plate_mov:
+        definition: 'seq/{Sequence}/{Shot}/plate/org/v{version}/{Project}_{Shot}_org_v{version}.mov'
+    source_mov:
+        definition: 'seq/{Sequence}/{Shot}/plate/src{src_number}/v{version}/{Project}_{Shot}_src{src_number}_v{version}.mov'
     plate_jpg:
         definition: 'seq/{Sequence}/{Shot}/plate/org_jpg/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.jpg'
     plate_tiff:
@@ -555,6 +557,8 @@ paths:
     nuke_write_dpx:
         # definition: '@shot_root/dev/nuke/write/{Project}_{Shot}_{Step}_v{version}/{Project}_{Shot}_{Step}_v{version}[_{name}].{SEQ}.dpx'
         definition: '@shot_root/preview/{Project}_{Shot}_{Step}_v{version}/{Project}_{Shot}_{Step}_v{version}[_{name}].{SEQ}.dpx'
+    nuke_write_mov_plate:
+        definition: '@shot_root/preview/{Project}_{Shot}_{Step}_v{version}/{Project}_{Shot}_{Step}_v{version}[_{name}].mov'
     # nuke_write_jpg:
         # definition: '@shot_root/dev/nuke/write/{Project}_{Shot}_{Step}_v{version}/{Project}_{Shot}_{Step}_v{version}[_{name}].{SEQ}.jpg'
     nuke_write_mov:
@@ -568,6 +572,8 @@ paths:
         definition: '@shot_root/dev/nuke/precomp/{Project}_{Shot}_{Step}_v{version}_precomp/{Project}_{Shot}_{Step}_v{version}[_{name}]_precomp.{SEQ}.exr'
     nuke_precomp_dpx:
         definition: '@shot_root/dev/nuke/precomp/{Project}_{Shot}_{Step}_v{version}_precomp/{Project}_{Shot}_{Step}_v{version}[_{name}]_precomp.{SEQ}.dpx'
+    nuke_precomp_mov:
+        definition: '@shot_root/dev/nuke/precomp/{Project}_{Shot}_{Step}_v{version}_precomp/{Project}_{Shot}_{Step}_v{version}[_{name}]_precomp.mov'
 
 
     
