@@ -44,10 +44,10 @@ engines.tk-flame.location:
   type: app_store
   name: tk-flame
   version: v1.17.8
-engines.tk-houdini.location:
-  type: app_store
-  name: tk-houdini
-  version: v1.8.5
+# engines.tk-houdini.location:
+#   type: app_store
+#   name: tk-houdini
+#   version: v1.8.5
 engines.tk-mari.location:
   type: app_store
   name: tk-mari
@@ -84,3 +84,4 @@ engines.tk-vred.location:
 engines.tk-blender.location: '@engines.tk-blender.location'
 engines.tk-substancepainter.location: '@engines.tk-substancepainter.location'
 engines.tk-3de4.location: '@engines.tk-3de4.location'
+engines.tk-unreal.location: '@engines.tk-houdini.location'
