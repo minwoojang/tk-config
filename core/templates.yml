@@ -616,6 +616,13 @@ paths:
         definition: '@asset_root/pub/caches/{Asset}_{Step}_v{version}[_{name}].fbx'
 
 
+    ### Caches ###
+    asset_yeticache:
+        definition: '@asset_root/pub/caches/yeti/{Asset}_{Step}_v{version}/{name}/{name}.fur'
+    shot_yeticache:
+        definition: '@shot_root/pub/caches/yeti/{Shot}_{Step}_v{version}/{asset_namespace}/{name}/{name}.{SEQ}.fur'
+
+
     ##########################################################################################
     # Shot pipeline
 
