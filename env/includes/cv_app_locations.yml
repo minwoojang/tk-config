@@ -83,6 +83,6 @@ apps.tk-multi-tractor.location:
 apps.tk-multi-timelog.location:
   name: tk-multi-timelog
   type: dev
-  windpws_path: O:/inhouse/shotgun/application/tk-multi-timelog
+  windows_path: O:/inhouse/shotgun/application/tk-multi-timelog
   linux_path: /cocoa/inhouse/shotgun/application/tk-multi-timelog
   
