@@ -77,3 +77,12 @@ apps.tk-multi-tractor.location:
   type: dev
   windows_path: O:/inhouse/shotgun/application/tk-multi-tractor
   linux_path: /cocoa/inhouse/shotgun/application/tk-multi-tractor 
+
+
+# timelog tool
+apps.tk-multi-timelog.location:
+  name: tk-multi-timelog
+  type: dev
+  windpws_path: O:/inhouse/shotgun/application/tk-multi-timelog
+  linux_path: /cocoa/inhouse/shotgun/application/tk-multi-timelog
+  
