@@ -236,7 +236,7 @@ class AfterEffectsCopyRenderPlugin(HookBaseClass):
         
         # pub template : 확장자로 구분
         for r in render_paths:
-            if '####' in r:
+            if re.search(r'\.\d{4}\.', r) or '####' in r or '%04d' in r:
                 ext = r.split('.')[-1]
                 tmp = [t for t in render_seq_path_template_str if ext in t]
                 render_seq_path_template_str = ', '.join(tmp)
@@ -297,7 +297,7 @@ class AfterEffectsCopyRenderPlugin(HookBaseClass):
 
         # pub template : 확장자로 구분
         for r in render_paths:
-            if '####' in r:
+            if re.search(r'\.\d{4}\.', r) or '####' in r or '%04d' in r:
                 ext = r.split('.')[-1]
                 tmp = [t for t in render_seq_path_template_str if ext in t]
                 render_seq_path_template_str = ', '.join(tmp)
@@ -406,6 +406,8 @@ class AfterEffectsCopyRenderPlugin(HookBaseClass):
             path_template = mov_template
             
             if self.parent.engine.is_adobe_sequence(each_path):
+                path_template = seq_template
+            if re.search(r'\.\d{4}\.', each_path) or '%04d' in each_path:
                 path_template = seq_template
 
             # TODO: This is a hack to support multiple different extensions
@@ -640,11 +642,19 @@ class AfterEffectsCopyRenderPlugin(HookBaseClass):
             # the rendering is an image sequence or
             # a movie-container
             template = mov_template
+            match = re.search(r'\.(\d{4})\.', each_path)
+
             if is_sequence:
                 template = seq_template
                 fields_from_work_template["SEQ"] = "%{}d".format(
                     template.keys["SEQ"].format_spec
                 )
+
+            if match or '%04d' in each_path:
+                if match:
+                    frame_number = match.group(1)
+                    template = seq_template
+                    fields_from_work_template["SEQ"] = int(frame_number)
 
             # build the target file path with formattable frame numbers
             abstract_target_path = template.apply_fields(fields_from_work_template)

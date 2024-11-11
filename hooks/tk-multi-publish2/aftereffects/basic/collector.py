@@ -144,7 +144,7 @@ class AfterEffectsSceneCollector(HookBaseClass):
                 logger.info('****************** ITEM INFO ******************')
 
                 self.logger.info("Collected After Effects renderings: {}".format(comp_item_name))
-            logger.info('hello')
+
     def __icon_path(self):
         return os.path.join(self.disk_location, os.pardir, "icons", "aftereffects.png")
 
