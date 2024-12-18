@@ -503,7 +503,6 @@ paths:
         definition: '@shot_root/pub/nuke'
     # The location of WIP script files
     nuke_shot_work:
-        # definition: '@shot_root/dev/nuke/{Project}_{Shot}_{task_name}_[{name}_]v{version}.nk'
         definition: '@shot_root/dev/nuke/{Project}_{Shot}_[{name}_]{task_name}_v{version}.nk'
     # The location of backups of WIP files
     nuke_shot_snapshot:
@@ -553,29 +552,25 @@ paths:
         definition: 'seq/{Sequence}/{Shot}/plate/retime_jpg/v{version}/{Project}_{Shot}_retime_v{version}.{SEQ}.jpg'    
     # nuke_write
     nuke_write_exr:
-        # definition: '@shot_root/dev/nuke/write/{Project}_{Shot}_{Step}_v{version}/{Project}_{Shot}_{Step}_v{version}[_{name}].{SEQ}.exr'
-        definition: '@shot_root/preview/{Project}_{Shot}_{Step}_v{version}/{Project}_{Shot}_{Step}_v{version}[_{name}].{SEQ}.exr'
+        definition: '@shot_root/preview/{Project}_{Shot}[_{name}]_{Step}_v{version}/{Project}_{Shot}[_{name}]_{Step}_v{version}.{SEQ}.exr'
     nuke_write_dpx:
-        # definition: '@shot_root/dev/nuke/write/{Project}_{Shot}_{Step}_v{version}/{Project}_{Shot}_{Step}_v{version}[_{name}].{SEQ}.dpx'
-        definition: '@shot_root/preview/{Project}_{Shot}_{Step}_v{version}/{Project}_{Shot}_{Step}_v{version}[_{name}].{SEQ}.dpx'
+        definition: '@shot_root/preview/{Project}_{Shot}[_{name}]_{Step}_v{version}/{Project}_{Shot}[_{name}]_{Step}_v{version}.{SEQ}.dpx'
     nuke_write_mov_plate:
-        definition: '@shot_root/preview/{Project}_{Shot}_{Step}_v{version}/{Project}_{Shot}_{Step}_v{version}[_{name}].mov'
+        definition: '@shot_root/preview/{Project}_{Shot}[_{name}]_{Step}_v{version}/{Project}_{Shot}[_{name}]_{Step}_v{version}.mov'
     # nuke_write_jpg:
-        # definition: '@shot_root/dev/nuke/write/{Project}_{Shot}_{Step}_v{version}/{Project}_{Shot}_{Step}_v{version}[_{name}].{SEQ}.jpg'
+        # definition: '@shot_root/dev/nuke/write/{Project}_{Shot}[_{name}]_{Step}_v{version}/{Project}_{Shot}[_{name}]_{Step}_v{version}.{SEQ}.jpg'
     nuke_write_mov:
-        # definition: '@shot_root/preview/{Project}_{Shot}_{Step}_v{version}/{Project}_{Shot}_{Step}_v{version}[_{name}].mov'
-        definition: '@shot_root/preview/{Project}_{Shot}_{Step}_v{version}[_{name}].mov'
+        definition: '@shot_root/preview/{Project}_{Shot}[_{name}]_{Step}_v{version}.mov'
     nuke_write_mov_asset:
         definition: '@asset_root/preview/{name}_v{version}.mov'
 
     # precomp
     nuke_precomp_exr:
-        definition: '@shot_root/dev/nuke/precomp/{Project}_{Shot}_{Step}_v{version}_precomp/{Project}_{Shot}_{Step}_v{version}[_{name}]_precomp.{SEQ}.exr'
+        definition: '@shot_root/dev/nuke/precomp/{Project}_{Shot}[_{name}]_{Step}_v{version}_precomp/{Project}_{Shot}[_{name}]_{Step}_v{version}_precomp.{SEQ}.exr'
     nuke_precomp_dpx:
-        definition: '@shot_root/dev/nuke/precomp/{Project}_{Shot}_{Step}_v{version}_precomp/{Project}_{Shot}_{Step}_v{version}[_{name}]_precomp.{SEQ}.dpx'
+        definition: '@shot_root/dev/nuke/precomp/{Project}_{Shot}[_{name}]_{Step}_v{version}_precomp/{Project}_{Shot}[_{name}]_{Step}_v{version}_precomp.{SEQ}.dpx'
     nuke_precomp_mov:
-        definition: '@shot_root/dev/nuke/precomp/{Project}_{Shot}_{Step}_v{version}_precomp/{Project}_{Shot}_{Step}_v{version}[_{name}]_precomp.mov'
-
+        definition: '@shot_root/dev/nuke/precomp/{Project}_{Shot}[_{name}]_{Step}_v{version}_precomp/{Project}_{Shot}[_{name}]_{Step}_v{version}_precomp.mov'
 
     
 
