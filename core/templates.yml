@@ -503,7 +503,8 @@ paths:
         definition: '@shot_root/pub/nuke'
     # The location of WIP script files
     nuke_shot_work:
-        definition: '@shot_root/dev/nuke/{Project}_{Shot}_{task_name}_[{name}_]v{version}.nk'
+        # definition: '@shot_root/dev/nuke/{Project}_{Shot}_{task_name}_[{name}_]v{version}.nk'
+        definition: '@shot_root/dev/nuke/{Project}_{Shot}_[{name}_]{task_name}_v{version}.nk'
     # The location of backups of WIP files
     nuke_shot_snapshot:
         definition: '@shot_root/dev/nuke/snapshots/{Project}_{Shot}_{Step}_[{name}_]v{version}.{timestamp}.nk'
