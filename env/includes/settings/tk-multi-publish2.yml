@@ -272,9 +272,10 @@ settings.tk-multi-publish2.nuke.asset_step:
   help_url: *help_url
   location: "@apps.tk-multi-publish2.location"
 
-# shot step
+# shot step 
+#{config}/tk-multi-publish2/maya/shot/shot_collector.py
 settings.tk-multi-publish2.nuke.shot_step:
-  collector: "{self}/collector.py:{engine}/tk-multi-publish2/basic/collector.py"
+  collector: "{self}/collector.py:{config}/tk-multi-publish2/nuke/shot/shot_collector.py"
   collector_settings:
       Work Template: nuke_shot_work
   publish_plugins:
@@ -291,8 +292,8 @@ settings.tk-multi-publish2.nuke.shot_step:
     hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/nuke_publish_script.py"
     settings:
         Publish Template: nuke_shot_publish
-  - name: Submit for Review
-    hook: "{engine}/tk-multi-publish2/basic/submit_for_review.py"
+  - name: Retime plate Publish
+    hook: "{config}/tk-multi-publish2/nuke/shot/publish_retime_plate.py"
     settings: {}
   - name: Update Flame Clip
     hook: "{engine}/tk-multi-publish2/basic/nuke_update_flame_clip.py"
