@@ -383,13 +383,13 @@ paths:
         definition: '@shot_root/pub/maya'
     # The location of WIP files
     maya_shot_work:
-        definition: '@shot_root/dev/maya/{Project}_{Shot}_{Step}_v{version}[_{name}].{maya_extension}'
+        definition: '@shot_root/dev/maya/{Project}_{Shot}_{Step}[_{name}]_v{version}.{maya_extension}'
     # The location of backups of WIP files
     maya_shot_snapshot:
-        definition: '@shot_root/dev/maya/snapshots/{Project}_{Shot}_{Step}_v{version}[_{name}].{timestamp}.{maya_extension}'
+        definition: '@shot_root/dev/maya/snapshots/{Project}_{Shot}_{Step}[_{name}]_v{version}.{timestamp}.{maya_extension}'
     # The location of published maya files
     maya_shot_publish:
-        definition: '@shot_root/pub/maya/{Project}_{Shot}_{Step}_v{version}[_{name}].{maya_extension}'
+        definition: '@shot_root/pub/maya/{Project}_{Shot}_{Step}[_{name}]_v{version}.{maya_extension}'
 
 
     #
@@ -561,6 +561,8 @@ paths:
         # definition: '@shot_root/dev/nuke/write/{Project}_{Shot}[_{name}]_{Step}_v{version}/{Project}_{Shot}[_{name}]_{Step}_v{version}.{SEQ}.jpg'
     nuke_write_mov:
         definition: '@shot_root/preview/{Project}_{Shot}[_{name}]_{Step}_v{version}.mov'
+    nuke_write_mov_genernal:
+        definition: '@shot_root/preview/{Project}_{Shot}_{Step}[_{name}]_v{version}.mov'
     nuke_write_mov_asset:
         definition: '@asset_root/preview/{name}_v{version}.mov'
 
@@ -730,13 +732,13 @@ paths:
         definition: '@asset_root/pub/maya'
     # The location of WIP files
     maya_asset_work:
-        definition: '@asset_root/dev/maya/{Project}_{Asset}_{Step}_v{version}[_{name}].{maya_extension}' #{name}.v{version}.{maya_extension}
+        definition: '@asset_root/dev/maya/{Project}_{Asset}_{Step}[_{name}]_v{version}.{maya_extension}' #{name}.v{version}.{maya_extension}
     # The location of backups of WIP files
     maya_asset_snapshot:
-        definition: '@asset_root/dev/maya/snapshots/{Project}_{Asset}_{Step}_v{version}[_{name}].{timestamp}.{maya_extension}'
+        definition: '@asset_root/dev/maya/snapshots/{Project}_{Asset}_{Step}[_{name}]_v{version}.{timestamp}.{maya_extension}'
     # The location of published maya files
     maya_asset_publish:
-        definition: '@asset_root/pub/maya/{Project}_{Asset}_{Step}_v{version}[_{name}].{maya_extension}'
+        definition: '@asset_root/pub/maya/{Project}_{Asset}_{Step}[_{name}]_v{version}.{maya_extension}'
 
 
     #
