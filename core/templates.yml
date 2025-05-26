@@ -548,6 +548,8 @@ paths:
         definition: 'seq/{Sequence}/{Shot}/plate/retime/v{version}/{Project}_{Shot}_retime_v{version}.{SEQ}.exr'
     retime_dpx:
         definition: 'seq/{Sequence}/{Shot}/plate/retime/v{version}/{Project}_{Shot}_retime_v{version}.{SEQ}.dpx'
+    retime_mov:
+        definition: 'seq/{Sequence}/{Shot}/plate/retime/v{version}/{Project}_{Shot}_retime_v{version}.mov'
     retime_jpg:
         definition: 'seq/{Sequence}/{Shot}/plate/retime_jpg/v{version}/{Project}_{Shot}_retime_v{version}.{SEQ}.jpg'   
     # nuke_write
