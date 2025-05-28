@@ -535,8 +535,12 @@ paths:
         definition: 'seq/{Sequence}/{Shot}/plate/src{src_number}/v{version}/{Project}_{Shot}_src{src_number}_v{version}.{SEQ}.dpx'
     plate_mov:
         definition: 'seq/{Sequence}/{Shot}/plate/org/v{version}/{Project}_{Shot}_org_v{version}.mov'
+    log_plate_mov:
+        definition: 'seq/{Sequence}/{Shot}/plate/org/{Project}_{Shot}_org_v{version}.mov'
     source_mov:
         definition: 'seq/{Sequence}/{Shot}/plate/src{src_number}/v{version}/{Project}_{Shot}_src{src_number}_v{version}.mov'
+    log_source_mov:
+        definition: 'seq/{Sequence}/{Shot}/plate/src{src_number}/{Project}_{Shot}_src{src_number}_v{version}.mov'
     plate_jpg:
         definition: 'seq/{Sequence}/{Shot}/plate/org_jpg/v{version}/{Project}_{Shot}_org_v{version}.{SEQ}.jpg'
     plate_tiff:
