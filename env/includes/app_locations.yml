@@ -144,5 +144,6 @@ apps.tk-mari-projectmanager.location:
 
 apps.tk-multi-workfiles2.location: '@apps.tk-multi-workfiles2.location'
 apps.tk-multi-tractor.location: '@apps.tk-multi-tractor.location'
+apps.tk-multi-library.location: '@apps.tk-multi-library.location'
 
 frameworks: '@frameworks'

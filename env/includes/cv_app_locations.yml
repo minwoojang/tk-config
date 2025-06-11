@@ -86,3 +86,10 @@ apps.tk-multi-timelog.location:
   windows_path: O:/inhouse/shotgun/application/tk-multi-timelog
   linux_path: /cocoa/inhouse/shotgun/application/tk-multi-timelog
   
+
+# CV Library
+apps.tk-multi-library.location:
+  name: tk-multi-library
+  type: dev
+  windows_path: O:/inhouse/shotgun/application/tk-multi-library
+  linux_path: /cocoa/inhouse/shotgun/application/tk-multi-library
