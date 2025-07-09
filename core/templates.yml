@@ -555,7 +555,14 @@ paths:
     retime_mov:
         definition: 'seq/{Sequence}/{Shot}/plate/retime/v{version}/{Project}_{Shot}_retime_v{version}.mov'
     retime_jpg:
-        definition: 'seq/{Sequence}/{Shot}/plate/retime_jpg/v{version}/{Project}_{Shot}_retime_v{version}.{SEQ}.jpg'   
+        definition: 'seq/{Sequence}/{Shot}/plate/retime_jpg/v{version}/{Project}_{Shot}_retime_v{version}.{SEQ}.jpg'
+    # guide
+    guide_jpg:
+        definition: 'seq/{Sequence}/{Shot}/guide/guide_jpg/v{version}/{Project}_{Shot}_guide_v{version}.1001.jpg'
+    guide_png:
+        definition: 'seq/{Sequence}/{Shot}/guide/guide_png/v{version}/{Project}_{Shot}_guide_v{version}.1001.png'
+    guide_mov:
+        definition: 'seq/{Sequence}/{Shot}/guide/guide_mov/v{version}/{Project}_{Shot}_guide_v{version}.mov'
     # nuke_write
     nuke_write_exr:
         definition: '@shot_root/preview/{Project}_{Shot}[_{name}]_{Step}_v{version}/{Project}_{Shot}[_{name}]_{Step}_v{version}.{SEQ}.exr'
