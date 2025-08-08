@@ -42,9 +42,10 @@ frameworks:
       name: tk-framework-desktopserver
   tk-framework-qtwidgets_v2.x.x:
     location:
-      version: v2.10.7
-      type: app_store
+      type: path
       name: tk-framework-qtwidgets
+      windows_path: O:/inhouse/shotgun/framework/tk-framework-qtwidgets/v2.12.6
+      linux_path: /cocoa/inhouse/shotgun/framework/tk-framework-qtwidgets/v2.12.6
   tk-framework-shotgunutils_v4.x.x:
     location:
       version: v4.4.15
@@ -52,13 +53,10 @@ frameworks:
       name: tk-framework-shotgunutils
   tk-framework-shotgunutils_v5.x.x:
     location:
-      version: v5.8.6
-      type: app_store
+      type: path
       name: tk-framework-shotgunutils
-      # version: v5.10.3
-      # type: path
-      # windows_path: O:/inhouse/shotgun/framework/tk-framework-shotgunutils/v5.10.3
-      # linux_path: /cocoa/inhouse/shotgun/framework/tk-framework-shotgunutils/v5.10.3
+      windows_path: O:/inhouse/shotgun/framework/tk-framework-shotgunutils/v5.10.3
+      linux_path: /cocoa/inhouse/shotgun/framework/tk-framework-shotgunutils/v5.10.3
   tk-framework-widget_v0.2.x:
     location:
       version: v0.2.8
