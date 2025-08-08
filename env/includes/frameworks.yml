@@ -55,6 +55,10 @@ frameworks:
       version: v5.8.6
       type: app_store
       name: tk-framework-shotgunutils
+      # version: v5.10.3
+      # type: path
+      # windows_path: O:/inhouse/shotgun/framework/tk-framework-shotgunutils/v5.10.3
+      # linux_path: /cocoa/inhouse/shotgun/framework/tk-framework-shotgunutils/v5.10.3
   tk-framework-widget_v0.2.x:
     location:
       version: v0.2.8
