@@ -25,7 +25,7 @@ includes:
 - ./tk-datamanager.yml
 - ./tk-outsourcing.yml
 - ./tk-multi-timelog.yml
-# - ./tk-multi-library.yml
+- ./tk-multi-library.yml
 
 ################################################################################
 
@@ -55,7 +55,7 @@ settings.tk-desktop.project:
     tk-multi-timelog: "@settings.tk-multi-timelog.standalone"
     tk-datamanager: "@settings.tk-datamanager.standalone"
     tk-outsourcing: "@settings.tk-outsourcing.standalone"
-    # tk-multi-library: "@settings.tk-multi-library"
+    tk-multi-library: "@settings.tk-multi-library"
   groups:
   - matches:
     - "*Fla*"

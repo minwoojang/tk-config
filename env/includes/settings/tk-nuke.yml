@@ -25,7 +25,7 @@ includes:
 - ./tk-multi-snapshot.yml
 - ./tk-multi-workfiles2.yml
 - ./tk-nuke-writenode.yml
-# - ./tk-multi-library.yml
+- ./tk-multi-library.yml
 
 ################################################################################
 # Hiero
@@ -156,7 +156,7 @@ settings.tk-nuke.shot:
     tk-multi-screeningroom: "@settings.tk-multi-screeningroom.rv"
     tk-multi-shotgunpanel: "@settings.tk-multi-shotgunpanel"
     tk-multi-workfiles2: "@settings.tk-multi-workfiles2.launch_at_startup"
-    # tk-multi-library: "@settings.tk-multi-library"
+    tk-multi-library: "@settings.tk-multi-library"
     tk-nuke-quickreview:
       location: "@apps.tk-nuke-quickreview.location"
   menu_favourites:
@@ -166,7 +166,7 @@ settings.tk-nuke.shot:
 # shot_step
 settings.tk-nuke.shot_step:
   apps:
-    # tk-multi-library: "@settings.tk-multi-library"
+    tk-multi-library: "@settings.tk-multi-library"
     tk-multi-about:
       location: "@apps.tk-multi-about.location"
     tk-multi-setframerange:
