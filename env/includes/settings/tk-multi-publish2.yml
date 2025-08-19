@@ -340,9 +340,9 @@ settings.tk-multi-publish2.photoshop.asset_step:
   - name: Publish to ShotGrid
     hook: "{self}/publish_file.py"
     settings: {}
-  - name: Upload for review
-    hook: "{self}/upload_version.py"
-    settings: {}
+  # - name: Upload for review
+  #   hook: "{self}/upload_version.py"
+  #   settings: {}
   - name: Begin file versioning
     hook: "{engine}/tk-multi-publish2/basic/start_version_control.py"
     settings: {}
@@ -350,9 +350,9 @@ settings.tk-multi-publish2.photoshop.asset_step:
     hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_document.py"
     settings:
         Publish Template: photoshop_asset_publish
-  - name: Upload for review
-    hook: "{engine}/tk-multi-publish2/basic/upload_version.py"
-    settings: {}
+  # - name: Upload for review
+  #   hook: "{engine}/tk-multi-publish2/basic/upload_version.py"
+  #   settings: {}
   - name: Publish PNG to ShotGrid
     hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_image.py"
     settings:
@@ -380,9 +380,9 @@ settings.tk-multi-publish2.photoshop.shot_step:
   - name: Publish to ShotGrid
     hook: "{self}/publish_file.py"
     settings: {}
-  - name: Upload for review
-    hook: "{self}/upload_version.py"
-    settings: {}
+  # - name: Upload for review
+  #   hook: "{self}/upload_version.py"
+  #   settings: {}
   - name: Begin file versioning
     hook: "{engine}/tk-multi-publish2/basic/start_version_control.py"
     settings: {}
@@ -390,9 +390,9 @@ settings.tk-multi-publish2.photoshop.shot_step:
     hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_document.py"
     settings:
         Publish Template: photoshop_shot_publish
-  - name: Upload for review
-    hook: "{engine}/tk-multi-publish2/basic/upload_version.py"
-    settings: {}
+  # - name: Upload for review
+  #   hook: "{engine}/tk-multi-publish2/basic/upload_version.py"
+  #   settings: {}
   - name: Publish PNG to ShotGrid
     hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_image.py"
     settings:
