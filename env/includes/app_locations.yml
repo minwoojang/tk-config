@@ -141,6 +141,11 @@ apps.tk-mari-projectmanager.location:
   name: tk-mari-projectmanager
   type: app_store
   version: v1.3.1
+apps.tk-config-basic.location:
+  name: tk-config-basic
+  type: path
+  windows_path: O:/inhouse/shotgun/engine/tk-config-basic/v1.7.5
+  linux_path: /cocoa/inhouse/shotgun/engine/tk-config-basic/v1.7.5
 
 apps.tk-multi-workfiles2.location: '@apps.tk-multi-workfiles2.location'
 apps.tk-multi-tractor.location: '@apps.tk-multi-tractor.location'
