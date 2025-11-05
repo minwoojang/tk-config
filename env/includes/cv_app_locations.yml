@@ -31,6 +31,7 @@ apps.tk-multi-asset_register.location:
   type: dev
   path: O:/inhouse/shotgun/application/tk-multi-asset_register
 
+
 # plate convert
 apps.tk-multi-plate_convert.location:
   name: tk-plate_convert
@@ -39,12 +40,12 @@ apps.tk-multi-plate_convert.location:
   linux_path: /cocoa/inhouse/shotgun/application/tk-multi-plate_convert
 
 
-# workfiles2
-apps.tk-multi-workfiles2.location:
-  name: tk-multi-workfiles2
-  type: dev
-  linux_path: /cocoa/inhouse/shotgun/engine/tk-multi-workfiles2
-  windows_path: O:/inhouse/shotgun/engine/tk-multi-workfiles2
+# # workfiles2
+# apps.tk-multi-workfiles2.location:
+#   name: tk-multi-workfiles2
+#   type: dev
+#   linux_path: /cocoa/inhouse/shotgun/engine/tk-multi-workfiles2
+#   windows_path: O:/inhouse/shotgun/engine/tk-multi-workfiles2
 
 
 # Data Manager

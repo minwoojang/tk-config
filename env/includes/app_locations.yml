@@ -24,130 +24,130 @@ includes:
 apps.tk-multi-about.location:
   type: app_store
   name: tk-multi-about
-  version: v0.4.2
+  version: v0.5.2
 apps.tk-multi-breakdown.location:
   type: app_store
   name: tk-multi-breakdown
-  version: v1.8.2
+  version: v1.9.1
 apps.tk-multi-breakdown2.location:
   type: app_store
   name: tk-multi-breakdown2
-  version: v0.2.7
+  version: v0.4.4
 apps.tk-multi-data-validation.location:
   type: app_store
   name: tk-multi-data-validation
-  version: v0.1.5
+  version: v0.3.3
 apps.tk-multi-demo.location:
   type: app_store
   name: tk-multi-demo
-  version: v1.3.5
+  version: v1.5.2
 apps.tk-multi-launchapp.location:
   type: app_store
   name: tk-multi-launchapp
-  version: v0.12.3
+  version: v0.14.0
 apps.tk-multi-loader2.location:
   type: app_store
   name: tk-multi-loader2
-  version: v1.22.1
+  version: v1.25.4
 apps.tk-multi-publish2.location:
   type: app_store
   name: tk-multi-publish2
-  version: v2.6.7
+  version: v2.10.5
 apps.tk-multi-pythonconsole.location:
   type: app_store
   name: tk-multi-pythonconsole
-  version: v1.3.1
+  version: v1.4.3
 apps.tk-multi-reviewsubmission.location:
   type: app_store
   name: tk-multi-reviewsubmission
-  version: v1.2.1
+  version: v1.3.1
 apps.tk-multi-screeningroom.location:
   type: app_store
   name: tk-multi-screeningroom
-  version: v0.5.1
+  version: v0.6.3
 apps.tk-multi-setframerange.location:
   type: app_store
   name: tk-multi-setframerange
-  version: v0.5.1
+  version: v0.6.2
 apps.tk-multi-shotgunpanel.location:
   type: app_store
   name: tk-multi-shotgunpanel
-  version: v1.8.6
+  version: v1.9.2
 apps.tk-multi-snapshot.location:
   type: app_store
   name: tk-multi-snapshot
-  version: v0.9.1
-# apps.tk-multi-workfiles2.location:
-#   type: app_store
-#   name: tk-multi-workfiles2
-#   version: v0.13.6
+  version: v0.10.2
+apps.tk-multi-workfiles2.location:
+  type: app_store
+  name: tk-multi-workfiles2
+  version: v0.16.0
 apps.tk-multi-devutils.location:
   type: app_store
   name: tk-multi-devutils
-  version: v1.2.1
+  version: v1.3.2
 apps.tk-multi-bg-publish.location:
   type: app_store
   name: tk-multi-bg-publish
-  version: v0.1.4
+  version: v0.2.1
 apps.tk-shotgun-folders.location:
   type: app_store
   name: tk-shotgun-folders
-  version: v0.3.1
+  version: v0.4.0
 apps.tk-shotgun-launchfolder.location:
   type: app_store
   name: tk-shotgun-launchfolder
-  version: v0.3.1
+  version: v0.4.0
 apps.tk-shotgun-launchpublish.location:
   type: app_store
   name: tk-shotgun-launchpublish
-  version: v0.5.1
+  version: v0.7.1
 apps.tk-shotgun-launchvredreview.location:
   type: app_store
   name: tk-shotgun-launchvredreview
-  version: v1.1.4
+  version: v1.2.1
 apps.tk-hiero-export.location:
   type: app_store
   name: tk-hiero-export
-  version: v0.7.2
+  version: v0.8.3
 apps.tk-hiero-openinshotgun.location:
   type: app_store
   name: tk-hiero-openinshotgun
-  version: v0.4.2
+  version: v0.5.0
 apps.tk-houdini-alembicnode.location:
   type: app_store
   name: tk-houdini-alembicnode
-  version: v0.5.2
+  version: v0.6.0
 apps.tk-houdini-mantranode.location:
   type: app_store
   name: tk-houdini-mantranode
-  version: v0.5.2
+  version: v0.6.0
 apps.tk-nuke-quickreview.location:
   type: app_store
   name: tk-nuke-quickreview
-  version: v1.2.1
+  version: v1.3.2
 apps.tk-nuke-writenode.location:
   name: tk-nuke-writenode
   type: app_store
-  version: v1.6.2
+  version: v1.7.2
 apps.tk-flame-export.location:
   name: tk-flame-export
   type: app_store
-  version: v1.10.6
+  version: v1.11.4
 apps.tk-flame-review.location:
   name: tk-flame-review
   type: app_store
-  version: v1.4.5
+  version: v1.5.5
 apps.tk-mari-projectmanager.location:
   name: tk-mari-projectmanager
   type: app_store
-  version: v1.3.1
-apps.tk-config-basic.location:
-  name: tk-config-basic
-  type: path
-  windows_path: O:/inhouse/shotgun/engine/tk-config-basic/v1.7.5
-  linux_path: /cocoa/inhouse/shotgun/engine/tk-config-basic/v1.7.5
+  version: v1.4.1
 
-apps.tk-multi-workfiles2.location: '@apps.tk-multi-workfiles2.location'
+# apps.tk-config-basic.location:
+#   name: tk-config-basic
+#   type: path
+#   windows_path: O:/inhouse/shotgun/engine/tk-config-basic/v1.7.5
+#   linux_path: /cocoa/inhouse/shotgun/engine/tk-config-basic/v1.7.5
+
 apps.tk-multi-tractor.location: '@apps.tk-multi-tractor.location'
 apps.tk-multi-library.location: '@apps.tk-multi-library.location'
 

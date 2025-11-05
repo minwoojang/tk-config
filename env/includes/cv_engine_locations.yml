@@ -31,9 +31,8 @@ engines.tk-3de4.location:
   linux_path: /cocoa/inhouse/shotgun/engine/tk-3de4
   windows_path: O:\\inhouse\\shotgun\\engine\\tk-3de4
 
-
-# Houdini
-engines.tk-houdini.location:
-  type: path
-  linux_path: /cocoa/inhouse/shotgun/engine/tk-houdini
-  windows_path: O:\\inhouse\\shotgun\\engine\\tk-houdini
+# # Houdini
+# engines.tk-houdini.location:
+#   type: path
+#   linux_path: /cocoa/inhouse/shotgun/engine/tk-houdini
+#   windows_path: O:\\inhouse\\shotgun\\engine\\tk-houdini
