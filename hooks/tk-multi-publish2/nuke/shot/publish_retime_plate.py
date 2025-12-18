@@ -113,6 +113,11 @@ class NukeRetimePublishPlugin(HookBaseClass):
         # path = nuke.root().name().replace("/", os.path.sep)
         path = _session_path()
         fields = self.__nuke_shot_work.get_fields(path)
+
+        # 누크씬파일에 프로젝트 이름 없을 경우
+        if 'Project' not in fields:        
+            fields['Project'] = self.__project['name']
+            
         self.__retime_exr_path = None
         self.__retime_dpx_path = None
         self.__retime_org_mov_path = self.__retime_org_mov.apply_fields(fields)
@@ -400,8 +405,7 @@ class NukeRetimePublishPlugin(HookBaseClass):
 
 
             job.addChild(main_task)
-            job.spool(hostname="192.168.1.123", owner="cocoa")
-        
+            job.spool(hostname="10.0.20.30", owner="cocoa")       
             
 
         self.logger.info("퍼블리싱 실행")
