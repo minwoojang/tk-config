@@ -295,6 +295,9 @@ settings.tk-multi-publish2.nuke.shot_step:
   - name: Retime plate Publish
     hook: "{config}/tk-multi-publish2/nuke/shot/publish_retime_plate.py"
     settings: {}
+  - name: undist Publish
+    hook: "{config}/tk-multi-publish2/nuke/shot/publish_undist.py"
+    settings: {}
   - name: Update Flame Clip
     hook: "{engine}/tk-multi-publish2/basic/nuke_update_flame_clip.py"
     settings:
