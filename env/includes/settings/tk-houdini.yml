@@ -23,7 +23,6 @@ includes:
 - ./tk-multi-shotgunpanel.yml
 - ./tk-multi-snapshot.yml
 - ./tk-multi-workfiles2.yml
-- ./tk-houdini-import.yml
 
 ################################################################################
 
@@ -56,7 +55,6 @@ settings.tk-houdini.asset_step:
     tk-multi-workfiles2: "@settings.tk-multi-workfiles2.houdini.asset_step"
     tk-houdini-alembicnode: "@settings.tk-houdini-alembicnode.asset_step"
     tk-houdini-mantranode: "@settings.tk-houdini-mantranode.asset_step"
-    tk-houdini-import: "@settings.tk-houdini-import"
   menu_favourites:
   - {app_instance: tk-multi-workfiles2, name: File Open...}
   - {app_instance: tk-multi-snapshot, name: Snapshot...}
@@ -86,7 +84,6 @@ settings.tk-houdini.sequence:
     tk-multi-screeningroom: "@settings.tk-multi-screeningroom.rv"
     tk-multi-shotgunpanel: "@settings.tk-multi-shotgunpanel"
     tk-multi-workfiles2: "@settings.tk-multi-workfiles2"
-    tk-houdini-import: "@settings.tk-houdini-import"
   menu_favourites:
   - {app_instance: tk-multi-workfiles2, name: File Open...}
   location: "@engines.tk-houdini.location"
@@ -99,7 +96,6 @@ settings.tk-houdini.shot:
     tk-multi-screeningroom: "@settings.tk-multi-screeningroom.rv"
     tk-multi-shotgunpanel: "@settings.tk-multi-shotgunpanel"
     tk-multi-workfiles2: "@settings.tk-multi-workfiles2"
-    tk-houdini-import: "@settings.tk-houdini-import"
   menu_favourites:
   - {app_instance: tk-multi-workfiles2, name: File Open...}
   location: "@engines.tk-houdini.location"
@@ -123,7 +119,6 @@ settings.tk-houdini.shot_step:
     tk-multi-workfiles2: "@settings.tk-multi-workfiles2.houdini.shot_step"
     tk-houdini-alembicnode: "@settings.tk-houdini-alembicnode.shot_step"
     tk-houdini-mantranode: "@settings.tk-houdini-mantranode.shot_step"
-    tk-houdini-import: "@settings.tk-houdini-import"
   menu_favourites:
   - {app_instance: tk-multi-workfiles2, name: File Open...}
   - {app_instance: tk-multi-snapshot, name: Snapshot...}

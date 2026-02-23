@@ -95,9 +95,3 @@ apps.tk-multi-library.location:
   windows_path: O:/inhouse/shotgun/application/tk-multi-library
   linux_path: /cocoa/inhouse/shotgun/application/tk-multi-library
 
-# Houdini Import
-apps.tk-houdini-import.location:
-  name: tk-houdini-Import
-  type: dev
-  windows_path: O:/inhouse/shotgun/application/tk-houdini-import
-  linux_path: /cocoa/inhouse/shotgun/application/tk-houdini-import

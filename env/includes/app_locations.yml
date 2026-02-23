@@ -150,6 +150,5 @@ apps.tk-mari-projectmanager.location:
 
 apps.tk-multi-tractor.location: '@apps.tk-multi-tractor.location'
 apps.tk-multi-library.location: '@apps.tk-multi-library.location'
-apps.tk-houdini-import.location: '@apps.tk-houdini-import.location'
 
 frameworks: '@frameworks'
