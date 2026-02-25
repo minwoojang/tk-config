@@ -9,12 +9,6 @@ primary:
   shotgun_storage_id: 102
   windows_path: Z:\Project
 
-DELL:
-  default: false
-  linux_path: /show2
-  mac_path: null
-  shotgun_storage_id: 234
-  windows_path: M:\
 
 
 # End of file.
