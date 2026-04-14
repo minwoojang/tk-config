@@ -313,8 +313,9 @@ class PhotoshopCCDocumentPublishPlugin(HookBaseClass):
         # are appropriate for current os, no double separators, etc.
         path = sgtk.util.ShotgunPath.normalize(path)
 
+        # 현재 작업 파일 저장 금지
         # ensure the document is saved
-        engine.save(document)
+        # engine.save(document)
 
         # update the item with the saved document path
         item.properties["path"] = path
@@ -332,19 +333,20 @@ class PhotoshopCCDocumentPublishPlugin(HookBaseClass):
             instances.
         :param item: Item to process
         """
+        pass
 
-        publisher = self.parent
-        engine = publisher.engine
+        # publisher = self.parent
+        # engine = publisher.engine
 
-        # do the base class finalization
-        super().finalize(settings, item)
+        # # do the base class finalization
+        # super().finalize(settings, item)
 
-        document = item.properties.get("document")
-        path = item.properties["path"]
+        # document = item.properties.get("document")
+        # path = item.properties["path"]
 
-        # we need the path to be saved for this document. ensure the document
-        # is provided and allow the base method to supply the new path
-        save_callback = lambda path, d=document: engine.save_to_path(d, path)
+        # # we need the path to be saved for this document. ensure the document
+        # # is provided and allow the base method to supply the new path
+        # save_callback = lambda path, d=document: engine.save_to_path(d, path)
 
         # 새버전 저장 정지
         # # bump the document path to the next version
