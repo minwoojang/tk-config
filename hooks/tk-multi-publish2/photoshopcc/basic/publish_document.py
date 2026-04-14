@@ -346,11 +346,12 @@ class PhotoshopCCDocumentPublishPlugin(HookBaseClass):
         # is provided and allow the base method to supply the new path
         save_callback = lambda path, d=document: engine.save_to_path(d, path)
 
-        # bump the document path to the next version
-        new_version_path = self._save_to_next_version(path, item, save_callback)
+        # 새버전 저장 정지
+        # # bump the document path to the next version
+        # new_version_path = self._save_to_next_version(path, item, save_callback)
 
-        if hasattr(engine, "add_to_context_cache"):
-            engine.add_to_context_cache(new_version_path, item.context)
+        # if hasattr(engine, "add_to_context_cache"):
+        #     engine.add_to_context_cache(new_version_path, item.context)
 
 
 def _get_save_as_action(document):
