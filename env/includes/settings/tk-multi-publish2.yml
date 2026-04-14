@@ -350,7 +350,7 @@ settings.tk-multi-publish2.photoshop.asset_step:
     hook: "{engine}/tk-multi-publish2/basic/start_version_control.py"
     settings: {}
   - name: Publish to ShotGrid
-    hook: "{self}/publish_file.py:{config}/tk-multi-publish2/basic/publish_document.py"
+    hook: "{self}/publish_file.py:{config}/tk-multi-publish2/photoshopcc/basic/publish_document.py"
     settings:
         Publish Template: photoshop_asset_publish
   # - name: Upload for review
@@ -390,7 +390,7 @@ settings.tk-multi-publish2.photoshop.shot_step:
     hook: "{engine}/tk-multi-publish2/basic/start_version_control.py"
     settings: {}
   - name: Publish to ShotGrid
-    hook: "{self}/publish_file.py:{config}/tk-multi-publish2/basic/publish_document.py"
+    hook: "{self}/publish_file.py:{config}/tk-multi-publish2/photoshopcc/basic/publish_document.py"
     settings:
         Publish Template: photoshop_shot_publish
   # - name: Upload for review
