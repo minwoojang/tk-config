@@ -10,6 +10,8 @@
 
 import os
 import sgtk
+import shutil
+import re
 
 HookBaseClass = sgtk.get_hook_baseclass()
 
@@ -313,6 +315,10 @@ class PhotoshopCCDocumentPublishPlugin(HookBaseClass):
         # are appropriate for current os, no double separators, etc.
         path = sgtk.util.ShotgunPath.normalize(path)
 
+        # 작업 파일(레이어 히스토리 살아있는) 별도 저장
+        new_version_file = increase_version(path)
+        shutil.copy2(str(path), new_version_file)
+
         # ensure the document is saved
         engine.save(document)
 
@@ -332,19 +338,20 @@ class PhotoshopCCDocumentPublishPlugin(HookBaseClass):
             instances.
         :param item: Item to process
         """
+        pass
 
-        publisher = self.parent
-        engine = publisher.engine
+        # publisher = self.parent
+        # engine = publisher.engine
 
-        # do the base class finalization
-        super().finalize(settings, item)
+        # # do the base class finalization
+        # super().finalize(settings, item)
 
-        document = item.properties.get("document")
-        path = item.properties["path"]
+        # document = item.properties.get("document")
+        # path = item.properties["path"]
 
-        # we need the path to be saved for this document. ensure the document
-        # is provided and allow the base method to supply the new path
-        save_callback = lambda path, d=document: engine.save_to_path(d, path)
+        # # we need the path to be saved for this document. ensure the document
+        # # is provided and allow the base method to supply the new path
+        # save_callback = lambda path, d=document: engine.save_to_path(d, path)
 
         # 새버전 저장 정지
         # # bump the document path to the next version
@@ -391,3 +398,31 @@ def _document_path(document):
         path = None
 
     return path
+
+
+def increase_version(path):
+    """
+    히스토리가 살아있는 기존 작업 파일을 버전하나 올린
+    파일 이름을 제작하는 함수
+    """
+
+    # 기존 이름 분리
+    folder, filename = os.path.split(path)
+    name, ext = os.path.splitext(filename)
+    
+    pattern = r"(?P<v>[vV])(?P<num>\d+)"
+    match = re.search(pattern, name)
+    if match:
+        v_char = match.group("v")      # 'v' 또는 'V'
+        v_num_str = match.group("num") # '001'
+        padding = len(v_num_str)       # 자릿수 확인 (여기서는 3)
+        
+        # 숫자 1 증가시키고 원래 자릿수 맞추기 (001 -> 002)
+        new_v_num = int(v_num_str) + 1
+        new_v_str = f"{v_char}{new_v_num:0{padding}d}" # 예: v002
+        
+        # 원래 이름에서 버전 부분만 교체
+        new_name = re.sub(pattern, new_v_str, name)
+        return os.path.join(folder, new_name + ext)
+    
+    return path # 버전을 못 찾으면 원래 경로 반환
