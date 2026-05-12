@@ -92,7 +92,7 @@ class NukeRetimePublishPlugin(HookBaseClass):
         self.__shot_ent = self.__context.entity
         self.__project_info = self.__sg.find_one("Project", [['id', 'is', self.__project['id']]],
                                                 ['sg_color_space', 'sg_mov_codec', 'sg_out_format', 'sg_fps', 'sg_mov_colorspace'])
-        self.__user_info = self.__sg.find_one('HumanUser', [['id', 'is', self.__user['id']]], ['sg_initials'])
+        self.__user_info = self.__sg.find_one('HumanUser', [['id', 'is', self.__user['id']]], ['name'])
         self.__first_frame = int(nuke.root()["first_frame"].value())
         self.__last_frame = int(nuke.root()["last_frame"].value())
 
@@ -332,7 +332,7 @@ class NukeRetimePublishPlugin(HookBaseClass):
             # Job 생성
             job = author.Job(service="tractor")
             
-            title = '<font color="#008000">[RETIME_PUBLISH]</font> <font color="#87cefa">[{0}]</font> {1}_publish'.format(self.__user_info['sg_initials'], "retime")
+            title = '<font color="#008000">[RETIME_PUBLISH]</font> <font color="#87cefa">[{0}]</font> {1}_publish'.format(self.__user_info['name'], "retime")
             job.title = title
             job.projects = [self.__project['name']]
             job.service = "Linux64"
