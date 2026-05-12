@@ -155,11 +155,6 @@ class NukeRetimePublishPlugin(HookBaseClass):
             nuke.message("write node의 이름을 점검하세요. ex) retime_ 부분이 필요합니다.")
             return False
         
-        print(self._upload_mov_path)
-        print(self._upload_mov_path)
-        print(self._upload_mov_path)
-        print(self._upload_mov_path)
-        
 
         self.logger.info("Nuke Retime 퍼블리싱 검증 완료")
         return True
@@ -199,21 +194,21 @@ class NukeRetimePublishPlugin(HookBaseClass):
         return jpg  
 
     def _create_jpg_job(self, nuke_script):
-        command = ['rez-env','nuke-13.2.8','--','nuke','-ix',nuke_script]
+        command = ['rez-env','nuke-15.0.4','--','nuke','-ix',nuke_script]
         return command
     
     def _create_mov_job(self, nuke_script):
         colorspace = str(self.__project_info['sg_color_space'])
         if not colorspace.find("ACES") == -1:
-            command = ['rez-env', 'nuke-13.2.8','ocio_config','--', 'nuke', '-ix',nuke_script]
+            command = ['rez-env', 'nuke-15.0.4','ocio_config','--', 'nuke', '-ix',nuke_script]
         elif not colorspace.find("Arri") == -1:
-            command = ['rez-env', 'nuke-13.2.8','alexa4_config','--', 'nuke', '-ix',nuke_script]
+            command = ['rez-env', 'nuke-15.0.4','alexa4_config','--', 'nuke', '-ix',nuke_script]
         elif not colorspace.find("Alexa") == -1:
-            command = ['rez-env', 'nuke-13.2.8','alexa_config','--', 'nuke', '-ix',nuke_script]
+            command = ['rez-env', 'nuke-15.0.4','alexa_config','--', 'nuke', '-ix',nuke_script]
         elif not colorspace.find('Sony') == -1:
-            command = ['rez-env', 'nuke-13.2.8','sony_config','--', 'nuke', '-ix',nuke_script]
+            command = ['rez-env', 'nuke-15.0.4','sony_config','--', 'nuke', '-ix',nuke_script]
         else:
-            command = ['rez-env', 'nuke-13.2.8','--', 'nuke', '-ix']
+            command = ['rez-env', 'nuke-15.0.4','--', 'nuke', '-ix']
 
         return command
 
@@ -297,11 +292,16 @@ class NukeRetimePublishPlugin(HookBaseClass):
 
             colorspace = str(self.__project_info['sg_color_space'])
 
+            tk = sgtk.sgtk_from_entity("Project", self.__project["id"])
+            context = tk.context_from_entity("Shot", self.__shot_ent["id"])
+            template = tk.templates["nuke_shot_work"]
+            fields = template.get_fields(path)
+            version = fields.get("version")
             # Retime 퍼블리쉬 아이템 등록
             # 1. Retime exr or dpx 플레이트
             # jpg 시퀀스는 생략
             name = item.properties.get("publish_name", os.path.basename(path))        
-            version = int(name.split("_")[4].split(".")[0].split("v")[-1])
+            # version = int(name.split("_")[4].split(".")[0].split("v")[-1])
             if self.__type == "exr":
                 item.properties["local_path"] = self.__retime_exr_path
                 # print(self.__retime_exr_path)
@@ -313,10 +313,6 @@ class NukeRetimePublishPlugin(HookBaseClass):
             publish_type = sg.find_one("PublishedFileType", [["code", "is", "Retime"]], ["code"])
             item.properties["published_file_type"] = publish_type["code"]
             item.thumbnail_enabled = False
-
-
-            tk = sgtk.sgtk_from_entity("Project", self.__project["id"])
-            context = tk.context_from_entity("Shot", self.__shot_ent["id"])
 
             publish_data = {
                 "tk" : tk,
@@ -350,15 +346,15 @@ class NukeRetimePublishPlugin(HookBaseClass):
 
             command = None
             if "ACES" in colorspace:
-                command = ['rez-env', 'nuke-13.2.8', 'ocio_config']
+                command = ['rez-env', 'nuke-15.0.4', 'ocio_config']
             elif "Arri" in colorspace:
-                command = ['rez-env', 'nuke-13.2.8', 'alexa4_config']
+                command = ['rez-env', 'nuke-15.0.4', 'alexa4_config']
             elif "Alexa" in colorspace:
-                command = ['rez-env', 'nuke-13.2.8', 'alexa_config']
+                command = ['rez-env', 'nuke-15.0.4', 'alexa_config']
             elif "Sony" in colorspace:
-                command = ['rez-env', 'nuke-13.2.8', 'sony_config']
+                command = ['rez-env', 'nuke-15.0.4', 'sony_config']
             else:
-                command = ['rez-env', 'nuke-13.2.8']
+                command = ['rez-env', 'nuke-15.0.4']
 
             command.append('--')
             command.append('nuke')
