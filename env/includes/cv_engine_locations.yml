@@ -36,3 +36,9 @@ engines.tk-3de4.location:
 #   type: path
 #   linux_path: /cocoa/inhouse/shotgun/engine/tk-houdini
 #   windows_path: O:\\inhouse\\shotgun\\engine\\tk-houdini
+
+# Maya
+engines.tk-maya.location:
+  type: path
+  linux_path: /cocoa/inhouse/shotgun/engine/tk-maya
+  windows_path: O:\\inhouse\\shotgun\\engine\\tk-maya
