@@ -29,6 +29,7 @@ ENGINES = {
     'tk-maya': 'maya' ,
     'tk-nuke': 'nuke',
     'tk-nukestudio': 'nuke',
+    "tk-mari": "mari",
     'tk-3de4' : '3de',
     'tk-substancepainter' : "subs",
     'tk-blender' : "blender",

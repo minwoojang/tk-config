@@ -11,7 +11,7 @@
 
 # location descriptors for engines used in this configuration
 includes:
-- ./cv_engine_locations.yml
+  - ./cv_engine_locations.yml
 
 ################################################################################
 
@@ -48,10 +48,6 @@ engines.tk-houdini.location:
   type: app_store
   name: tk-houdini
   version: v1.9.12
-engines.tk-mari.location:
-  type: app_store
-  name: tk-mari
-  version: v1.4.8
 engines.tk-maya.location:
   type: app_store
   name: tk-maya
@@ -81,7 +77,8 @@ engines.tk-vred.location:
   name: tk-vred
   version: v3.5.7
 
-engines.tk-blender.location: '@engines.tk-blender.location'
-engines.tk-substancepainter.location: '@engines.tk-substancepainter.location'
-engines.tk-3de4.location: '@engines.tk-3de4.location'
+engines.tk-blender.location: "@engines.tk-blender.location"
+engines.tk-substancepainter.location: "@engines.tk-substancepainter.location"
+engines.tk-3de4.location: "@engines.tk-3de4.location"
+engines.tk-mari.location: '@engines.tk-mari.location'
 # engines.tk-maya.location: '@engines.tk-maya.location'

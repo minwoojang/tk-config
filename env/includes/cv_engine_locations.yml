@@ -11,7 +11,6 @@
 
 ################################################################################
 
-
 ################################################################################
 # Blender
 engines.tk-blender.location:
@@ -19,7 +18,7 @@ engines.tk-blender.location:
   linux_path: /cocoa/inhouse/shotgun/engine/tk-blender
   windows_path: O:\\inhouse\\shotgun\\engine\\tk-blender
 
-# Substancepainter 
+# Substancepainter
 engines.tk-substancepainter.location:
   type: path
   linux_path: /cocoa/inhouse/shotgun/engine/tk-substancepainter
@@ -30,6 +29,12 @@ engines.tk-3de4.location:
   type: path
   linux_path: /cocoa/inhouse/shotgun/engine/tk-3de4
   windows_path: O:\\inhouse\\shotgun\\engine\\tk-3de4
+
+# mari
+engines.tk-mari.location:
+  type: path
+  linux_path: /cocoa/inhouse/shotgun/engine/tk-mari
+  windows_path: O:\\inhouse\\shotgun\\engine\\tk-mari
 
 # # Houdini
 # engines.tk-houdini.location:
