@@ -36,6 +36,10 @@ keys:
         type: str
     Shot:
         type: str
+    shot_number:
+        type: str
+    plate_type:
+        type: str
     Step:
         type: str
     sg_asset_type:
@@ -1031,6 +1035,9 @@ paths:
 #
 
 strings:
+
+    scan_name:
+        definition: '{Project}_{Sequence}_{shot_number}_{plate_type}_v{version}'
 
     # when a review Version in Shotgun is created inside of Nuke, this is the
     # name that is being given to it (the code field)
